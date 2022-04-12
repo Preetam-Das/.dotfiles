@@ -1,0 +1,200 @@
+[colors]
+background = ${xrdb:background}
+#background = #dd191919
+background-alt = ${xrdb:color1}
+
+foreground = #ffffff
+foreground-alt = #ffffff
+
+primary = ${xrdb:color2}
+secondary = #ffffff
+alert = #bd2c40
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+[bar/mybar]
+
+width 	= 100%
+height 	= 25
+line-size = 2
+enable-ipc = true
+
+# colors
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+# fonts
+font-0 = "Source Code Pro:pixelsize=12:style=regular;2"
+#font-0 = "FiraCode Nerd Font:pixelsize=14;2"
+#font-1 = "Gaegu:pixelsize=18;2"
+
+wm-restack = bspwm
+override-redirect = false
+cursor-click = pointer
+
+# module settings
+fixed-center = true
+module-margin = 0 
+padding-left = 1
+
+modules-left = bspwm cpu minimized
+modules-center = date
+modules-right = pulseaudio battery
+
+
+# Modules
+
+[module/bspwm]
+type = internal/bspwm 
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-foreground = ${xrdb:color0}
+label-occupied = %icon%
+label-empty = %icon%
+label-occupied-underline = ${xrdb:color5}
+
+label-separator = .
+
+# padding
+label-focused-padding = 1
+#label-empty-padding = 1
+#label-occupied-padding = 1
+#label-urgent-padding = 1
+
+# colors
+label-focused-background = ${colors.background-alt}
+
+# icons
+ws-icon-0 = I;I 
+ws-icon-1 = II;II
+ws-icon-2 = III;III
+ws-icon-3 = IV;IV
+ws-icon-4 = V;V
+ws-icon-5 = VI;VI
+ws-icon-6 = VII;VII
+ws-icon-7 = VIII;VIII
+ws-icon-8 = IX;IX
+ws-icon-9 = X;X
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = %a, %b%e %I:%M %p
+;time-alt = %I:%M %p
+
+format-prefix-foreground = ${colors.foreground-alt}
+label = %date% %time%
+
+format-underline = ${xrdb:color1}
+click-left = alacritty -e cal
+
+[module/xwindow]
+type = internal/xwindow
+
+label = %title:0:20:...%
+format = <label>
+format-font = 1
+format-padding = 1
+format-underline = ${xrdb:color3}
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+
+format-spacing = 0
+#format-offset = -18
+
+label-open = 
+label-open-padding-left = 1
+label-open-padding-right = 2
+label-open-background = ${xrdb:color2}
+label-open-foreground = #000
+
+label-close = cancel
+label-close-background = ${xrdb:color3}
+label-close-foreground = #000
+label-close-padding-left = 1
+label-close-padding-right = 1
+#label-separator = |
+
+menu-0-0 = reboot
+menu-0-0-background = ${xrdb:color2}
+menu-0-0-foreground = #000
+menu-0-0-padding = 1
+menu-0-0-exec = systemctl reboot
+
+menu-0-1 = power off
+menu-0-1-background = ${xrdb:color1}
+menu-0-1-foreground = #000
+menu-0-1-padding-right = 2
+menu-0-1-padding-left = 1
+menu-0-1-exec = systemctl poweroff
+
+[module/classroom]
+type = custom/text
+content = -_-
+click-left = xdg-open https://classroom.google.com
+
+[module/battery]
+type = internal/battery
+full-at = 80
+
+format-discharging-background = ${xrdb:color4}
+format-discharging-foreground = #000
+format-discharging = Bat: <label-discharging>
+format-discharging-padding = 1
+# format-discharging-offset = 8;
+
+format-charging-background = ${xrdb:color4}
+format-charging-foreground = #000
+format-charging = Bat: <label-charging>
+format-charging-padding = 1
+#format-charging-underline = ${xrdb:color1}
+# format-charging-offset = 8;
+
+format-full-background = ${xrdb:color4}
+format-full-foreground = #000
+format-full = Bat: <label-full>
+format-full-padding = 1
+# format-full-offset = 8;
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-background = ${xrdb:color1}
+format-volume-foreground = #000
+format-volume-padding = 1
+format-volume = Vol: <label-volume>
+
+format-muted-background = ${xrdb:color1}
+format-muted-foreground = #000
+format-muted-padding = 1
+format-muted = Vol: muted
+
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/gmail/launch.py --label "INBOX" -p "Mail:" -c "#000"
+tail = true
+format-background = ${xrdb:color6}
+format-padding = 1
+click-left = xdg-open https://mail.google.com
+
+#format-offset = -10
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+#format-prefix = "Cpu: "
+format-prefix-foreground = #000
+format-background = ${xrdb:color3}
+format-padding = 1
+format-margin = 1
+#format-underline =  #52be80
+label =  %{A1:alacritty -e htop:}Cpu:%{A} %percentage%%
+format-foreground = #000
+# format-offset = 25

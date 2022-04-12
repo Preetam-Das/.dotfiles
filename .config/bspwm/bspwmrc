@@ -1,0 +1,71 @@
+#! /bin/sh
+
+# swallow window
+pgrep /home/pree/.local/bin/bspswallow || /home/pree/.local/bin/bspswallow &
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# pgrep conky || conky &
+$HOME/.config/polybar/launch.sh
+
+bspc monitor -d I II III IV V
+
+bspc config border_width         2
+#bspc config border_radius	 0 
+bspc config window_gap           7
+
+#my
+# bspc config focused_border_width	2
+#bspc config top_padding 		5
+#bspc config bottom_padding 		5
+#bspc config left_padding 		5
+#bspc config right_padding 		5
+bspc config focus_follows_pointer	false
+bspc config top_monocle_padding		0
+bspc config bottom_monocle_padding	0
+bspc config right_monocle_padding	0
+bspc config left_monocle_padding	0
+bspc config split_ratio          0.52
+bspc config gapless_monocle   true
+bspc config borderless_monocle      true
+# bspc config paddingless_monocle	 true
+# bspc desktop II -l monocle 
+
+# Window Rules
+# bspc rule -a firefox desktop='^2' follow=on
+# bspc rule -a Emacs state=tiled
+bspc rule -a Zathura state=fullscreen
+# bspc rule -a Alacritty -o state=fullscreen
+
+# wal -i ~/wallpapers/anime/ -t --iterative
+# wal -i ~/wallpapers/
+# feh --bg-fill wallpapers/anime/20.jpg
+# feh --bg-fill wallpapers/hidden-rain.jpg
+# feh --bg-fill wallpapers/anime --randomize
+# wal --theme random_dark -b "#191919"
+# wal --theme sexy-gotham
+# wal -t --theme monokai -t -b "#080507"
+# wal -i wallpapers/anime/ -t
+
+# Set the colors. (set pywal colors only after wal is loaded)
+# source the pywal-colors.
+# . "${HOME}/.cache/wal/colors.sh"
+# wal --theme base16-circus
+
+. "${HOME}/.cache/wal/colors.sh"
+bspc config normal_border_color "$color8"
+bspc config focused_border_color "$color1"
+bspc config presel_feedback_color "$color1"
+bspc config focused_border_color "#ff2342"
+
+
+#pywalfox update
+# zathura-pywal
+#changeBg.py
+
+# Remove temp files
+if [ -f ~/.config/bspwm/dontCycle ]; then rm ~/.config/bspwm/dontCycle; fi
+if [ -f ~/.config/bspwm/hiddenNodes ]; then rm ~/.config/bspwm/hiddenNodes; fi
+
+sleep 0.01 && polybar-msg cmd hide
+bspc config top_padding 0

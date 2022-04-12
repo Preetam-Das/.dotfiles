@@ -1,0 +1,2 @@
+sudo reflector --latest 5 --protocol https --country India --sort rate --save /etc/pacman.d/mirrorlist
+sudo mount -o gid=users

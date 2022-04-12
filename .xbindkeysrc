@@ -1,0 +1,32 @@
+# Increase volume
+"pactl set-sink-volume @DEFAULT_SINK@ +1700"
+   XF86AudioRaiseVolume
+
+# Decrease volume
+"pactl set-sink-volume @DEFAULT_SINK@ -1700"
+   XF86AudioLowerVolume
+
+# Mute volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+   XF86AudioMute
+
+# Mute microphone
+"pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+   XF86AudioMicMute
+
+# Brightness up
+"brightnessctl s 15+"
+  XF86MonBrightnessUp		
+
+# Brightness Down
+"brightnessctl s 15-"
+  XF86MonBrightnessDown
+
+
+# search youtube
+"ytfzf -D"
+  Shift+Mod4 + space
+
+# search youtube audio only
+"ytfzf -m -D"
+  Mod4+Control + space
