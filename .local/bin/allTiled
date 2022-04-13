@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+nodes=$(bspc query -N -n .window.local)
+for node in $nodes; do
+	bspc node $node -t tiled
+done

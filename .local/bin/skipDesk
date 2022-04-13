@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+#marked=$(bspc query -D -d focused)
+echo 0x0040000D
