@@ -8,6 +8,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # pgrep conky || conky &
 $HOME/.config/polybar/launch.sh
 
+# mpd
+mpc load guitar_ballads
+
 bspc monitor -d I II III IV V
 
 bspc config border_width         2

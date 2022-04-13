@@ -27,8 +27,8 @@ foreground = ${colors.foreground}
 
 # fonts
 font-0 = "Source Code Pro:pixelsize=12:style=regular;2"
-#font-0 = "FiraCode Nerd Font:pixelsize=14;2"
-#font-1 = "Gaegu:pixelsize=18;2"
+font-1 = "FiraCode Nerd Font:pixelsize=14;3"
+#font-2 = "Gaegu:pixelsize=18;2"
 
 wm-restack = bspwm
 override-redirect = false
@@ -39,7 +39,7 @@ fixed-center = true
 module-margin = 0 
 padding-left = 1
 
-modules-left = bspwm cpu minimized
+modules-left = bspwm cpu mpd 
 modules-center = date
 modules-right = pulseaudio battery
 
@@ -84,7 +84,7 @@ ws-icon-9 = X;X
 type = internal/date
 interval = 1
 
-date = %a, %b%e %I:%M %p
+date = %a, %b %e %I:%M %p
 ;time-alt = %I:%M %p
 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -198,3 +198,20 @@ format-margin = 1
 label =  %{A1:alacritty -e htop:}Cpu:%{A} %percentage%%
 format-foreground = #000
 # format-offset = 25
+
+[module/mpd]
+type = internal/mpd
+label-song = %title:0:31:%
+label-time = %elapsed%-%total%
+
+format-online = <toggle> [ <label-song> <bar-progress>]
+format-stopped = "<toggle>  "
+label-song-foreground = ${xrdb:color4} 
+
+icon-play = 
+icon-pause = 
+
+bar-progress-width = 5 
+bar-progress-indicator = |
+bar-progress-fill = = 
+bar-progress-empty = ─

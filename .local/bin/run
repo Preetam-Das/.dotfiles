@@ -8,24 +8,34 @@ fileName="${fullFileName%.*}"
 #echo $fileName
 #echo $ext
 
-[ ! -f $fullFileName ] && echo "$fullFileName: No such file" && exit 1
+[[ ! -f $fullFileName ]] && echo "$fullFileName: No such file" && exit 1
 
 if [ $ext == 'c' ]; then
-	if $(grep -Fxq "#include <ncurses.h>" $fullFileName); then
-		gcc $fullFileName -o $fileName -lncurses
-	else
-		gcc $fullFileName -o $fileName
-	fi
+	gcc "$@" -o $fileName
 	./$fileName
-	rm $fileName
+
 elif [ $ext == 'cpp' ]; then
-	#echo This is a c++ file *
-	g++ $fullFileName -o $fileName
+	g++ "$@" -o $fileName
 	./$fileName
-	rm $fileName
+
 elif [ $ext == 'py' ]; then
-	#echo This is a python file
 	python $fullFileName
+
+elif [ $ext == 'java' ]; then
+	javac $fullFileName
+	java $fileName
+
+elif [ $ext == 'vhdl' ]; then
+	mkdir -p work
+	opt="--workdir=work -fsynopsys"
+	ghdl -s $opt $fullFileName
+	ghdl -a $opt $fullFileName
+	ghdl -e $opt $fileName
+	if [[ "$@" == *"--vcd"* ]]; then
+		ghdl -r $opt $fileName --vcd="$fileName.vcd"
+	else 
+		ghdl -r $opt $fileName
+	fi
 fi
 
 exit 0

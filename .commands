@@ -1,2 +1,20 @@
+# Reflector 
 sudo reflector --latest 5 --protocol https --country India --sort rate --save /etc/pacman.d/mirrorlist
+
+# Mount Pendrive
 sudo mount -o gid=users
+
+# yt-dlp : extract audio
+yt-dlp -x
+
+# yt-fzf
+* press tab to select videos
+# get link
+ytfzf -L
+# play audio 
+ytfzf -m
+# reopen
+ytfzf -l
+
+# Alacritty
+ctrl+shift+space --vi mode
