@@ -1,3 +1,0 @@
-#! /usr/bin/sh
-
-zsh --exec /home/pree/.zshrc2

@@ -17,4 +17,5 @@
 (scroll-bar-mode -1)
 ;; set font size 
 (set-face-attribute 'default nil :height 110)
-
+;; prevent creation of backup files
+(setq make-backup-files nil)

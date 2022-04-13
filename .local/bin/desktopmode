@@ -1,8 +1,0 @@
-#! /usr/bin/bash
-if [[ $(bspc query --nodes --desktop focused) == "" ]]
-then
-	bspc desktop focused --layout monocle
-else
-	bspc desktop focused --layout tiled
-fi
-

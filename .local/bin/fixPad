@@ -1,7 +1,0 @@
-#!/usr/bin/bash
-
-desktops=$(bspc query -D -d .occupied)
-
-for desktop in $desktops; do
-    bspc config -d $desktop top_padding 0
-done
