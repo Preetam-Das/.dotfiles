@@ -1,13 +1,13 @@
 /* Center line thickness (pixels) */
 #define C_LINE 0
 /* Width (in pixels) of each bar */
-#define BAR_WIDTH 10 
+#define BAR_WIDTH 15 
 /* Width (in pixels) of each bar gap */
-#define BAR_GAP 2
+#define BAR_GAP 2 
 /* Outline color */
-#define BAR_OUTLINE #ffffff
+#define BAR_OUTLINE #000
 /* Outline width (in pixels, set to 0 to disable outline drawing) */
-#define BAR_OUTLINE_WIDTH 0 
+#define BAR_OUTLINE_WIDTH 2 
 /* Amplify magnitude of the results each bar displays */
 #define AMPLIFY 250 
 /* Whether the current settings use the alpha channel;
@@ -15,11 +15,11 @@
    correctly on X11 with `"native"` transparency. */
 #define USE_ALPHA 0 
 /* How strong the gradient changes */
-#define GRADIENT_POWER 60
+#define GRADIENT_POWER 300
 /* Bar color changes with height */
 #define GRADIENT (d / GRADIENT_POWER + 1)
 /* Bar color */
-#define COLOR (#000000 * 1)
+#define COLOR STDIN 
 #define DIRECTION 0
 /* Whether to switch left/right audio buffers */
 #define INVERT 0

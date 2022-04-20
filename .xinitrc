@@ -11,7 +11,7 @@ xbindkeys
 #wal -i wallpapers/anime/ --iterative
 #cp ~/.cache/wal/colors.sh ~/.cache/wal/glava.sh
 #wal --theme random_dark -b "#191919"
-wal -s -t -i wallpapers/favs/ -b "#191919" && cp .cache/wal/colors.sh .cache/wal/dmenu_colors.sh
+wal -s -t -i wallpapers/favs/ -b "#191919" && cp .cache/wal/colors.sh .cache/wal/dmenu_colors.sh && cp .cache/wal/colors .cache/wal/colors2
 wal -e --t random_dark -b "#191919"
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 exec bspwm

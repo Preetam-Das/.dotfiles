@@ -221,5 +221,5 @@ super + ctrl + {equal,minus}
 
 # tdrop scratchpad
 ctrl + alt + {1-9}
-	tdrop -am -w 40% -h 70% -y 20% -x 30% -n {1-9} alacritty
+	tdrop -am -w 40% -h 92% -y 5% -x 30% -n {1-9} alacritty
 

@@ -206,10 +206,14 @@ label-time = %elapsed%-%total%
 
 format-online = <toggle> [ <label-song> <bar-progress>]
 format-stopped = "<toggle>  "
+format-playing = <toggle> <icon-stop> [ <label-song> <bar-progress>]
+format-paused = <toggle> <icon-stop> [ <label-song> <bar-progress>]
+
 label-song-foreground = ${xrdb:color4} 
 
 icon-play = 
 icon-pause = 
+icon-stop = 
 
 bar-progress-width = 5 
 bar-progress-indicator = |

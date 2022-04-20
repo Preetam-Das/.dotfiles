@@ -197,7 +197,7 @@ exe "hi cCppString guifg=".s:uwu2_gui
 exe "hi cCurlyError guifg=".s:uwu7_gui." guibg=".s:uwu9_gui 
 exe "hi cErrInBracket guifg=".s:uwu7_gui." guibg=".s:uwu9_gui 
 exe "hi cErrInParen guifg=".s:uwu7_gui." guibg=".s:uwu9_gui 
-exe "hi cFloat guifg=".s:uwu8_gui 
+exe "hi cFloat guifg=".s:uwu7_gui 
 exe "hi cFormat guifg=".s:uwu4_gui 
 exe "hi cMutli guifg=".s:uwu3_gui 
 exe "hi cOperator guifg=".s:uwu4_gui 

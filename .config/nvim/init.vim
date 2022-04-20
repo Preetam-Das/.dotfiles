@@ -8,12 +8,14 @@ set splitbelow splitright
 set inccommand=nosplit
 set foldmethod=marker
 set foldmarker=blockStart,blockEnd
+filetype on
 filetype plugin on
 filetype plugin indent on
 syntax on
 set termguicolors
 autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 colorscheme uwu
+
 
 " Escape to nvim terminal mode
 :tnoremap <Esc> <C-\><C-n>
