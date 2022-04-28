@@ -179,7 +179,7 @@ super + ctrl + End
 
 # call scratchpad
 super + shift + Return
-	bspc rule -a Alacritty -o state=floating rectangle=750x200+1160+870 sticky=on && alacritty
+	bspc rule -a Alacritty -o state=floating rectangle=750x380+1160+690 sticky=on && alacritty
 
 # call fullscreen terminal
 super + shift + + ctrl + Return

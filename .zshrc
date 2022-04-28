@@ -72,7 +72,7 @@ alias receive='qrcp receive'
 alias gnome='dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY && startx /usr/bin/gnome-session'
 alias dmenu='dmenu.sh'
 alias javax='/usr/lib/jvm/java-18-openjdk/bin/java --enable-preview'
-alias 'glava'="sed '4q;d' ~/.cache/wal/colors2 | glava -di &"
+alias 'glava'="sed '4q;d' ~/.cache/wal/colors2 | glava -di"
 
 # my startups
 if [ "$TERM_PROGRAM" = "vscode" ]

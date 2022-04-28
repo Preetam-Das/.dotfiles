@@ -18,3 +18,13 @@ ytfzf -l
 
 # Alacritty
 ctrl+shift+space --vi mode
+
+# zsh
+# to suspend
+ctrl + z
+# to resume
+fg # in foreground
+bf # in background
+
+# fonts
+fc-list # use with grep -i to find fonts

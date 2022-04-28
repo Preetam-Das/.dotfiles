@@ -49,7 +49,9 @@
 (load-theme 'monokai t)
 ;; set up org babel
 (org-babel-do-load-languages
- 'org-babel-load-languages '((C . t)))
+ 'org-babel-load-languages 
+ 	'((C . t)(shell . t))
+	)
 (setq org-confirm-babel-evaluate nil)
 ;; 
 (setq x-select-enable-clipboard t)
