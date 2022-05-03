@@ -73,6 +73,8 @@ alias gnome='dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRE
 alias dmenu='dmenu.sh'
 alias javax='/usr/lib/jvm/java-18-openjdk/bin/java --enable-preview'
 alias 'glava'="sed '4q;d' ~/.cache/wal/colors2 | glava -di"
+alias arduino-cli="arduino-cli -p /dev/ttyUSB0 --fqbn arduino:avr:nano"
+alias arduino-clear="arduino-cli compile ~/Arduino/clear/clear.ino && arduino-cli upload /home/pree/Arduino/clear/clear.ino"
 
 # my startups
 if [ "$TERM_PROGRAM" = "vscode" ]

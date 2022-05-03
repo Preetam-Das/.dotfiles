@@ -25,6 +25,10 @@ elif [ $ext == 'java' ]; then
 	javac $fullFileName
 	java $fileName
 
+elif [ $ext == 'ino' ]; then
+	arduino-cli --fqbn arduino:avr:nano compile $fullFileName
+	arduino-cli --fqbn arduino:avr:nano -p /dev/ttyUSB0 upload $fileName
+
 elif [ $ext == 'vhdl' ]; then
 	mkdir -p work
 	opt="--workdir=work -fsynopsys"

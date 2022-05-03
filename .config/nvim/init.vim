@@ -15,6 +15,7 @@ syntax on
 set termguicolors
 autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 colorscheme uwu
+set shiftwidth=4
 
 
 " Escape to nvim terminal mode

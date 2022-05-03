@@ -24,9 +24,9 @@
 
 
 # search youtube
-"ytfzf -D"
+"ytfzf -Dls"
   Shift+Mod4 + space
 
 # search youtube audio only
-"ytfzf -m -D"
+"ytfzf -m -Dls"
   Mod4+Control + space
