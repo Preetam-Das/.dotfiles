@@ -3,3 +3,6 @@ df + c --> delete upto character 'c'
 # Just about any "motion" can be used for the d, c, y and similar commands.
 # same thing backward can be achived by dT and dF
 
+# highlight cursorline
+:set cursorline
+

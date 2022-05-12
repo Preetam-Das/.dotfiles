@@ -60,8 +60,11 @@ Plug 'tpope/vim-commentary'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
+
+
 
 lua require'colorizer'.setup()
 let g:vimtex_view_method = 'zathura'

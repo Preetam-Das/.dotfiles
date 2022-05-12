@@ -212,6 +212,9 @@ exe "hi cStorageClass guifg=".s:uwu3_gui
 exe "hi cString guifg=".s:uwu2_gui 
 exe "hi cType guifg=".s:uwu3_gui 
 exe "hi cUserCont guifg=".s:uwu7_gui
+exe "hi cComment guifg=".s:uwu7_gui
+exe "hi cUserFunction guifg=".s:uwu1_gui
+exe "hi cAnsiName guifg=".s:uwu11_gui
 
 " GoLang Highlight Groups 
 exe "hi goBlock guifg=".s:uwu7_gui 

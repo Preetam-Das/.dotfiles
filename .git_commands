@@ -1,2 +1,9 @@
 # change branch name
 git branch -m <newname>
+
+# git ignore files
+.gitignore
+
+# global
+# change core editor
+git config --global core.editor "<new-editor>"
