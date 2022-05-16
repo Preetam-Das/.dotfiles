@@ -1,0 +1,31 @@
+# NOTE Alt is for word Ctrl is for character
+
+# beginning of line
+    ctrl + a
+
+# end of line
+    ctrl + e
+
+# backword
+    ctrl + b
+    alt + b
+
+# forward
+    ctrl + f
+    alt + f
+
+# delete at cursor
+    ctrl + d
+    alt + d
+
+# delete from cursor to end
+    ctrl + k
+
+# kill the entire line
+    ctrl + u
+
+# capitalise word
+    alt + U
+
+# transpose (takes the last two charcters and swaps their position)
+    ctrl + t

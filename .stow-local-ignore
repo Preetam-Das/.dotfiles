@@ -1,6 +1,7 @@
 \.git
 .packages
 .commands
-userChrome.css
+.userChrome.css
 .vim_keybindings
+.emacs_keybindings
 .git_commands
