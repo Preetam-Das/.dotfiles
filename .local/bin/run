@@ -31,7 +31,7 @@ elif [ $ext == 'ino' ]; then
 
 elif [ $ext == 'vhdl' ] || [ $ext == 'vhd' ]; then
 	mkdir -p work
-	opt="--workdir=work -fsynopsys"
+	opt="--workdir=work -fsynopsys -fexplicit"
 	ghdl -s $opt $fullFileName
 	ghdl -a $opt $fullFileName
 	ghdl -e $opt $fileName

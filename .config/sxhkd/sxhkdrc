@@ -224,5 +224,5 @@ ctrl + alt + {1-9}
 	tdrop -am -w 40% -h 92% -y 5% -x 30% -n {1-9} alacritty
 
 # drawing terminals
-ctrl + shift + space
-    draw_terminal
+ctrl + shift + Return
+        draw_terminal
