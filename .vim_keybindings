@@ -6,3 +6,6 @@ df + c --> delete upto character 'c'
 # highlight cursorline
 :set cursorline
 
+# Generating a sequence of number
+:put = range(1, 100) 
+:0put = range(1, 100) -> to avoid blank line at top

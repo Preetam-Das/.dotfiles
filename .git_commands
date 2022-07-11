@@ -7,3 +7,12 @@ git branch -m <newname>
 # global
 # change core editor
 git config --global core.editor "<new-editor>"
+
+# to merge remote branch to local branch as one branch
+git pull --rebase
+
+# to reset staged changes
+git reset --hard
+
+# to reset unstaged changes
+git clean -fd (force and recurse directories)
