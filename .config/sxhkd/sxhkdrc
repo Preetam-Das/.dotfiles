@@ -226,3 +226,7 @@ ctrl + alt + {1-9}
 # drawing terminals
 ctrl + shift + Return
         draw_terminal
+
+# reload xinit
+super + ctrl + r
+	source /home/pree/.xinitrc
