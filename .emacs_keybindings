@@ -29,3 +29,6 @@
 
 # transpose (takes the last two charcters and swaps their position)
     ctrl + t
+
+# Reload buffer
+    M-x revert-buffer

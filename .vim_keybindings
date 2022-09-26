@@ -9,3 +9,12 @@ df + c --> delete upto character 'c'
 # Generating a sequence of number
 :put = range(1, 100) 
 :0put = range(1, 100) -> to avoid blank line at top
+
+# changing case of letters
+# change ~ to u for lowercase U for uppercase (for visual block only)
+~    -> changes case of character under cursor or visual block
+3~   -> change case of next 3 character
+g~w  -> change case of words
+g~3w -> change case of next 3 words
+g~iw -> change case of inner word
+g~~  -> change case of line
