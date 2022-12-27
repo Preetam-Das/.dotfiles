@@ -1,4 +1,7 @@
+" Normal Settings blockStart
 " let g:node_client_debug = 1
+let mapleader = " "
+set autoindent
 set number relativenumber
 set noswapfile
 set scrolloff=5
@@ -17,6 +20,10 @@ autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 colorscheme uwu
 set shiftwidth=4
 
+" filetype
+autocmd FileType markdown set cursorline
+autocmd FileType markdown set conceallevel=2
+autocmd FileType markdown setlocal spell spelllang=en_gb
 
 " Escape to nvim terminal mode
 :tnoremap <Esc> <C-\><C-n>
@@ -25,25 +32,22 @@ set shiftwidth=4
 " Quick save
 inoremap <A-Return> <Esc>:w<cr>
 nnoremap <A-Return> :w<cr>
+
 " Remap split movement
 map <A-Left> <C-w>h
 map <A-Down> <C-w>j
 map <A-Up> <C-w>k
 map <A-Right> <C-w>l
+map <A-S-RIGHT> <Esc>:vert res +5<cr>
+map <A-S-LEFT> <Esc>:vert res -5<cr>
+map <A-S-DOWN> <Esc>:res -5<cr>
+map <A-S-UP> <Esc>:res +5<cr>
+
 " Copy
 map <C-y> "+y<Esc>
+" blockEnd
 
-function! MoveSeparator(PlusMinus)
-    let num=tabpagewinnr(tabpagenr())
-    let pm=a:PlusMinus
-    if  num == "2"
-        let pm = pm == '+' ? '-' : '+'
-    end
-    exec "resize " . pm . "1"
-endfunction
-nnoremap <silent> <C-UP>   :call MoveSeparator("-")<CR>
-nnoremap <silent> <C-DOWN> :call MoveSeparator("+")<CR>
-
+" Statusline-config blockStart
 set statusline =
 set statusline +=[%n]                                    " buffer number
 set statusline +=\ %F                                    " Full path to file
@@ -53,7 +57,9 @@ set statusline +=%r                                      " read only flag
 set statusline +=%w                                      " preview window flag
 set statusline +=%=%-14.(%l,%c%V%)                       " Line, column-virtual column"
 set statusline +=%=lines:\ %-5L                          " Lines in the buffer
+" blockEnd
 
+" Plugins blockStart
 call plug#begin()
 
 Plug 'tpope/vim-commentary'
@@ -61,15 +67,27 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'vimwiki/vimwiki'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
+"blockEnd
 
+" commentary-config blockStart
+autocmd FileType markdown setlocal commentstring=<!--%s-->
+autocmd FileType vimwiki setlocal commentstring=<!--%s-->
+" blockEnd
 
-
+" colorizer-config blockStart
 lua require'colorizer'.setup()
+" blockEnd
+
+" vimtex-config blockStart
 let g:vimtex_view_method = 'zathura'
+" blockEnd
 
-
+" CoC-Config blockStart
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -238,3 +256,15 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+let g:ycm_clangd_args=['--header-insertion=never']
+" blockEnd
+
+" vimwiki-config blockStart
+
+let g:vimwiki_list = [{'path': '~/notes/',
+                      \ 'syntax': 'markdown', 'ext': '.md',
+		      \ 'auto_tags':1}]
+let g:vimwiki_global_ext = 0
+:noremap <Leader><CR> <Plug>VimwikiFollowLink
+
+" blockEnd

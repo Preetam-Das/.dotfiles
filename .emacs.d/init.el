@@ -31,6 +31,8 @@
   (evil-mode 1)
   (evil-set-undo-system 'undo-redo))
 
+(require 'org-tempo)
+
 ;; line numbering
 (global-display-line-numbers-mode 1)
 ;; remove scroll bar
@@ -55,3 +57,7 @@
 (setq org-confirm-babel-evaluate nil)
 ;; 
 (setq x-select-enable-clipboard t)
+(set display-line-numbers-mode 'relative)
+(setq global-display-line-numbers 'relative)
+;; frame margin
+(set-frame-parameter nil 'internal-border-width 10)

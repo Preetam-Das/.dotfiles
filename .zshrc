@@ -48,7 +48,7 @@ zstyle ':completion:*' menu select # menu tab complete
 
 # Environment Variables 
 export PATH=$PATH:~/.local/bin/
-export BROWSER=firefox
+# export BROWSER=firefox.desktop
 export ANDROID_SDK_ROOT=/opt/android-sdk/
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -79,6 +79,8 @@ alias arduino-clear="arduino-cli compile ~/Arduino/clear/clear.ino && arduino-cl
 alias \215A\201="kbd_mode -a"
 alias hd="hexdump"
 alias youtube="ytfzf -ls"
+alias notes="nvim /home/pree/notes/index.md"
+alias config="cd ~/.config"
 
 # my startups
 if [ "$TERM_PROGRAM" = "vscode" ]
