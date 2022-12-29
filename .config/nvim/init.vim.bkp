@@ -45,6 +45,20 @@ map <A-S-UP> <Esc>:res +5<cr>
 
 " Copy
 map <C-y> "+y<Esc>
+
+" Disable arrow keys
+nnoremap <Left>   <nop> 
+vnoremap <Left>   <nop> 
+inoremap <Left>   <nop>
+nnoremap <Right>  <nop>
+vnoremap <Right>  <nop> 
+inoremap <Right>  <nop>
+nnoremap <Up>     <nop>
+vnoremap <Up>     <nop>
+inoremap <Up>     <nop>
+nnoremap <Down>   <nop>
+vnoremap <Down>   <nop>
+inoremap <Down>   <nop>
 " blockEnd
 
 " Statusline-config blockStart
@@ -72,7 +86,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
-"blockEnd
+" blockEnd
 
 " commentary-config blockStart
 autocmd FileType markdown setlocal commentstring=<!--%s-->
@@ -266,5 +280,6 @@ let g:vimwiki_list = [{'path': '~/notes/',
 		      \ 'auto_tags':1}]
 let g:vimwiki_global_ext = 0
 :noremap <Leader><CR> <Plug>VimwikiFollowLink
+let g:vimwiki_folding = 'custom'
 
 " blockEnd

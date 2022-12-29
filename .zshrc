@@ -80,7 +80,6 @@ alias \215A\201="kbd_mode -a"
 alias hd="hexdump"
 alias youtube="ytfzf -ls"
 alias notes="nvim /home/pree/notes/index.md"
-alias config="cd ~/.config"
 
 # my startups
 if [ "$TERM_PROGRAM" = "vscode" ]
