@@ -9,6 +9,8 @@ Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 Plug 'nvim-treesitter/playground'
 Plug 'vimwiki/vimwiki'
 Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
 
 -- LSP Support
 Plug 'neovim/nvim-lspconfig'
@@ -26,7 +28,6 @@ Plug 'hrsh7th/cmp-nvim-lua'
 --  Snippets
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
-
 Plug 'VonHeikemen/lsp-zero.nvim'
 
 vim.call('plug#end')

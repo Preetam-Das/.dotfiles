@@ -1,5 +1,3 @@
-
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=100
@@ -48,16 +46,22 @@ zstyle ':completion:*' menu select # menu tab complete
 
 # Environment Variables 
 export PATH=$PATH:~/.local/bin/
-# export BROWSER=firefox.desktop
 export ANDROID_SDK_ROOT=/opt/android-sdk/
 export _JAVA_AWT_WM_NONREPARENTING=1
+export GOPATH=$HOME/Others/go
+# export BROWSER=firefox.desktop
 
 # my aliases
 alias nv='nvim'
 alias sudo='sudo '
 alias py='python'
-alias ls='exa --icons'
-alias ll='exa -l --icons'
+if [ "$TERM" != "linux" ]; then
+    alias ls='exa --icons'
+    alias ll='exa -l --icons'
+else
+    alias ls='exa --no-icons'
+    alias ll='exa -l --no-icons'
+fi
 alias grep='grep --color=always'
 alias tree='tree -C'
 alias rn='ranger'
@@ -79,7 +83,7 @@ alias arduino-clear="arduino-cli compile ~/Arduino/clear/clear.ino && arduino-cl
 alias \215A\201="kbd_mode -a"
 alias hd="hexdump"
 alias youtube="ytfzf -ls"
-alias notes="nvim /home/pree/notes/index.md"
+alias notes="nvim /home/pree/Notes/index.md"
 
 # my startups
 if [ "$TERM_PROGRAM" = "vscode" ]
@@ -93,8 +97,8 @@ fi
 ~/.cache/wal/colors-tty.sh
 
 # Syntax Highlighting
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/pree/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/Others/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/pree/Others/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

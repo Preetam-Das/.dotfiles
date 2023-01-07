@@ -4,6 +4,9 @@ vim.keymap.set('', '<A-Return>'  , '<Esc>:w<cr>',  {desc = 'save file'})        
 -- Global Copy
 vim.keymap.set('', '<C-y>'       , '"+y<Esc>',     {desc = 'Copyy to " buffer'})    -- Ctrl + y
 
+-- Escape from terminal buffer
+vim.keymap.set('t', '<Esc>'       , '<C-\\><C-n>',     {desc = "Escape from terminal", silent = true})    -- Escape
+
 -- Split Movements
 vim.keymap.set('', '<A-Left>' , '<C-w>h', {desc = 'goto Left split'})       -- Alt + Left
 vim.keymap.set('', '<A-Right>', '<C-w>l', {desc = 'goto Right split'})      -- Alt + Right
@@ -21,3 +24,8 @@ vim.keymap.set('', '<Left>' ,  '<nop>', {silent = true})
 vim.keymap.set('', '<Right>' , '<nop>', {silent = true})
 vim.keymap.set('', '<Up>' ,    '<nop>', {silent = true})
 vim.keymap.set('', '<Down>' ,  '<nop>', {silent = true})
+
+-- Buffer keybinds
+vim.keymap.set('', '<Leader>n', '<cmd>bn<cr>', {silent = true})                   -- Leader + n
+vim.keymap.set('', '<Leader>p', '<cmd>bp<cr>', {silent = true})                   -- Leader + p
+vim.keymap.set('', '<Leader>d', '<cmd>bd | bp<cr>', {silent = true})              -- Leader + d

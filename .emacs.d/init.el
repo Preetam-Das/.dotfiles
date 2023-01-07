@@ -56,8 +56,7 @@
 	)
 (setq org-confirm-babel-evaluate nil)
 ;; 
-(setq x-select-enable-clipboard t)
-(set display-line-numbers-mode 'relative)
+;; (setq x-select-enable-clipboard t)
 (setq global-display-line-numbers 'relative)
 ;; frame margin
 (set-frame-parameter nil 'internal-border-width 10)
