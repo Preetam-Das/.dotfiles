@@ -38,6 +38,7 @@ zstyle ':vcs_info:*' unstagedstr ' *'
 zstyle ':vcs_info:*' stagedstr ' +'
 zstyle ':vcs_info:git*' formats '(%b%u%c) '
 
+# Prompt settings
 # RPS1='%F{red}%D{%I}%f:%F{green}%D{%M}%f %F{yellow}%D{%p}%f [%?]' # right prompt
 PS1='%F{5}%B%U%~%u%b%f ${vcs_info_msg_0_}
 %B%F{blue}>%f%b '	# prompt
@@ -51,17 +52,40 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export GOPATH=$HOME/Others/go
 # export BROWSER=firefox.desktop
 
+# My functions
+myls ()
+{
+    if [ "$TERM" != "linux" ]; then
+        exa --icons "$@"
+    else
+        exa --no-icons "$@"
+    fi
+}
+
+myll ()
+{
+    if [ "$TERM" != "linux" ]; then
+        exa -l --icons "$@"
+    else
+        exa -l --no-icons "$@"
+    fi
+}
+
+# quickly cd into configuration files
+configdir="$HOME/.config"
+cfg ()
+{
+    [ -d "$configdir/$1" ] && cd "$configdir/$1/" && nvim . && return
+    echo "$configdir/$1 doesn't exists"
+}
+
+
 # my aliases
+alias cpout='xclip -selection clipboard'
 alias nv='nvim'
 alias sudo='sudo '
-alias py='python'
-if [ "$TERM" != "linux" ]; then
-    alias ls='exa --icons'
-    alias ll='exa -l --icons'
-else
-    alias ls='exa --no-icons'
-    alias ll='exa -l --no-icons'
-fi
+alias ls='myls '
+alias ll='myll '
 alias grep='grep --color=always'
 alias tree='tree -C'
 alias rn='ranger'

@@ -1,48 +1,18 @@
-local mdgroup   = vim.api.nvim_create_augroup('markdown', { clear = true })
-local vimwgroup = vim.api.nvim_create_augroup('vimwiki', { clear = true })
+-- Markdown settings
+vim.api.nvim_create_autocmd('BufNewFile',
+        {pattern = '*.md',
+        command = 'setlocal syntax=markdown'})
 
--- Markdown <<FS>>
--- Set columncolor to restrict line width 
-vim.api.nvim_create_autocmd('Filetype',
-		{pattern = 'markdown',
-		group = mdgroup,
-		command = 'setlocal colorcolumn=100'})
+vim.api.nvim_create_autocmd('BufRead',
+        {pattern = '*.md',
+        command = 'setlocal syntax=markdown'})
 
--- Set cursorline for markdown files
-vim.api.nvim_create_autocmd('Filetype',
-		{pattern = 'markdown',
-		group = mdgroup,
-		command = 'set cursorline'})
+vim.api.nvim_create_autocmd('BufRead',
+        {pattern = '*.md',
+        command = 'setlocal conceallevel=2'})
 
--- Set comment string for vimwiki files
-vim.api.nvim_create_autocmd('Filetype',
-		{pattern = 'markdown',
-		group = mdgroup,
-		command = 'setlocal commentstring=<!--%s--'})
+vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set awa"})
 
--- Set conceallevel for markdown files
-vim.api.nvim_create_autocmd('Filetype',
-		{pattern = 'markdown',
-		group = mdgroup,
-		command = 'set conceallevel=2'})
+vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set colorcolumn=90"})
 
--- Set spellchecker for markdowns
-vim.api.nvim_create_autocmd('Filetype',
-		{pattern = 'markdown',
-		group = mdgroup,
-		command = 'setlocal spell spelllang=en_gb'})
--- <<FE>>
-
--- Vimwiki<<FS>>
--- Set spellchecker for vimwikis
-vim.api.nvim_create_autocmd('Filetype',
-		{pattern = 'vimwiki',
-		group = vimwgroup,
-		command = 'setlocal spell spelllang=en_gb'})
-
--- Set comment string for vimwiki files
-vim.api.nvim_create_autocmd('Filetype',
-		{pattern = 'vimwiki',
-		group = vimwgroup,
-		command = 'setlocal commentstring=<!--%s-->'})-- <<FE>>
-
+vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set cursorline"})

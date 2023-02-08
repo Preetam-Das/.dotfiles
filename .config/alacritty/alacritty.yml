@@ -33,7 +33,7 @@ font:
     # family: FiraCode Nerd Font Mono 
     style: Bold Italic
 
-  size: 7.0
+  size: 7.5
 
 key_bindings:
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
