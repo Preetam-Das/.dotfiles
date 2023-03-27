@@ -81,6 +81,7 @@ cfg ()
 
 
 # my aliases
+alias py='python'
 alias cpout='xclip -selection clipboard'
 alias nv='nvim'
 alias sudo='sudo '
