@@ -1,0 +1,10 @@
+#!/bin/sh
+
+killall -q hyprpaper
+wal=$(find ~/Media/wallpapers/favs -type f | shuf -n 1)
+# monitor=$(hyprctl -j monitors | jq -r '.[].name')
+echo "preload = $wal" > ~/.config/hypr/hyprpaper.conf
+echo "wallpaper = ,$wal" >> ~/.config/hypr/hyprpaper.conf
+wal -nqi $wal -e
+tail -16 ~/.cache/wal/colors.scss | sed 's/[#;]//g; s/:/ =/g' | awk '{sub($3, "rgba(&ee)"); print}' > ~/.cache/wal/colors-hyprland.conf
+

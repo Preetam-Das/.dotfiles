@@ -1,3 +1,6 @@
+# dd to burn iso
+dd bs=4M if= of= conv=fdatasync oflag=sync status=progress
+
 # Reflector 
 sudo reflector --latest 5 --protocol https --country India --sort rate --save /etc/pacman.d/mirrorlist
 

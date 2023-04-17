@@ -81,6 +81,7 @@ cfg ()
 
 
 # my aliases
+alias starty='Hyprland'
 alias py='python'
 alias cpout='xclip -selection clipboard'
 alias nv='nvim'
