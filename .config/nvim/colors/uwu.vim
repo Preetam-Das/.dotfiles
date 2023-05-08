@@ -45,7 +45,7 @@ exe "hi debugPC guibg=" .s:uwu8_gui
 
 "Syntax Highlighting 
 exe "hi CursorLineNR guifg=" .s:uwu0_gui 
-exe "hi CursorLine guibg=" .s:uwu0_gui 
+exe "hi CursorLine guibg=" .s:uwu8_gui 
 exe "hi ErrorMsg guifg=" .s:uwu1_gui." guibg=".s:uwu8_gui  
 exe "hi WarningMsg guifg=" .s:uwu0_gui 
 exe "hi PreProc guifg=" .s:uwu4_gui 
@@ -83,7 +83,7 @@ exe "hi Operator guifg=" .s:uwu4_gui
 exe "hi ColorColumn guibg=" .s:uwu8_gui  
 exe "hi PMenu guifg=".s:uwu7_gui." guibg=" .s:uwu0_gui   
 exe "hi PMenuSel guifg=".s:uwu8_gui." guibg=".s:uwu5_gui  
-exe "hi SignColumn guibg=" .s:uwu0_gui 
+exe "hi SignColumn guibg=NONE"
 exe "hi Title guifg=" .s:uwu3_gui 
 exe "hi LineNr guifg=".s:uwu2_gui 
 exe "hi NonText guifg=".s:uwu9_gui." guibg=".s:uwu0_gui 
@@ -91,10 +91,10 @@ exe "hi Comment guifg=".s:uwu15_gui
 exe "hi SpecialComment guifg=".s:uwu8_gui "gui=italic guibg=NONE "
 exe "hi TabLineFill gui=NONE guibg=".s:uwu8_gui 
 exe "hi TabLine guifg=".s:uwu7_gui." guibg=".s:uwu8_gui
-exe "hi StatusLine guibg=".s:uwufg_gui." guifg=".bg 
+exe "hi StatusLine guibg=".s:uwufg_gui." guifg=".s:uwu8_gui
 exe "hi StatusLineNC guibg=".bg." guifg=".bg
 exe "hi Search guibg=".s:uwu8_gui." guifg=".s:uwu4_gui
-exe "hi VertSplit gui=NONE guifg=".s:uwu0_gui." guibg=".bg 
+exe "hi VertSplit gui=NONE guifg=".s:uwu8_gui." guibg=NONE"
 exe "hi Visual gui=NONE guibg=".s:uwu12_gui" guifg=".s:uwu8_gui
 exe "hi Underlined guifg=".s:uwu3_gui 
 exe "hi EndOfBuffer guibg=NONE"

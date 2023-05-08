@@ -147,7 +147,7 @@
         "on-click-right": "iwgtk"
     },
     "pulseaudio": {
-        "tooltip": false
+        "tooltip": false,
         "scroll-step": 1, // %, can be a float
         "format": "Vol: {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",

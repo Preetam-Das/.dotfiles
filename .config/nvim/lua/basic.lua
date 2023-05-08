@@ -1,5 +1,7 @@
 vim.g.mapleader        = ' '                         -- set the leader key
 vim.cmd('colorscheme uwu')
+vim.diagnostic.config({ virtual_text = false,
+                        float = true})
 
 -- Netrw Config
 vim.g.netrw_banner     = 0                           -- Disable netrw banner

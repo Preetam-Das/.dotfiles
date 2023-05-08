@@ -18,6 +18,8 @@ bindkey "^[[F" end-of-line
 bindkey "\e[1~" beginning-of-line
 bindkey "\e[4~" end-of-line
 bindkey "\e[3~" delete-char
+bindkey "\ek"   up-line-or-history
+bindkey "\ej"   down-line-or-history
 
 # my
 setopt autocd # autocd
@@ -25,6 +27,7 @@ setopt PROMPT_SUBST
 eval "$(dircolors -b)"
 #export PATH=$PATH:~/.local/bin/
 export PATH=/home/pree/.local/bin:$PATH
+export LIBSEAT_BACKEND=logind
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
 
 # Load version control information
@@ -102,7 +105,6 @@ alias send='qrcp'
 alias receive='qrcp receive'
 alias gnome='dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY && startx /usr/bin/gnome-session'
 alias dmenu='dmenu.sh'
-alias javax='/usr/lib/jvm/java-18-openjdk/bin/java --enable-preview'
 alias 'glava'="sed '4q;d' ~/.cache/wal/colors2 | glava -di"
 alias arduino-cli="arduino-cli -p /dev/ttyUSB0 --fqbn arduino:avr:nano"
 alias arduino-clear="arduino-cli compile ~/Arduino/clear/clear.ino && arduino-cli upload /home/pree/Arduino/clear/clear.ino"

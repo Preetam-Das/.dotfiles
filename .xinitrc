@@ -13,9 +13,11 @@ xbindkeys
 #feh --bg-fill Media/wallpapers/favs/ --randomize
 #wal -i Media/wallpapers/favs/ --iterative
 #cp ~/.cache/wal/colors.sh ~/.cache/wal/glava.sh
-wal --theme random_dark -b "#191919"
-wal -s -t -i Media/wallpapers/favs/ -b "#191919" && cp .cache/wal/colors.sh .cache/wal/dmenu_colors.sh && cp .cache/wal/colors .cache/wal/colors2
-wal -e --t random_dark -b "#191919"
+/* wal --theme random_dark -b "#191919" */
+/* wal -s -t -i Media/wallpapers/favs/ -b "#191919" && cp .cache/wal/colors.sh .cache/wal/dmenu_colors.sh && cp .cache/wal/colors .cache/wal/colors2 */
+/* wal -e --t random_dark -b "#191919" */
+wal -nqi $(awk 'NR==1 {print $3}' ~/.config/hypr/hyprpaper.conf)
+feh --bg-fill $(awk 'NR==1 {print $3}' ~/.config/hypr/hyprpaper.conf)
 
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 exec bspwm
