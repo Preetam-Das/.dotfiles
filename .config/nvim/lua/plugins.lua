@@ -8,7 +8,6 @@ Plug('iamcco/markdown-preview.nvim', {['do'] = 'cd app && yarn install'})
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 -- Plug 'nvim-treesitter/playground'
 -- Plug 'vimwiki/vimwiki'
-Plug 'jakewvincent/mkdnflow.nvim'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 -- Plug 'tpope/vim-surround'

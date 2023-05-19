@@ -44,7 +44,7 @@ exe "hi debugBreakPoint guibg=" .s:uwu1_gui." guifg=".s:uwubg_gui
 exe "hi debugPC guibg=" .s:uwu8_gui
 
 "Syntax Highlighting 
-exe "hi CursorLineNR guifg=" .s:uwu0_gui 
+exe "hi CursorLineNr guifg=" .s:uwu2_gui 
 exe "hi CursorLine guibg=" .s:uwu8_gui 
 exe "hi ErrorMsg guifg=" .s:uwu1_gui." guibg=".s:uwu8_gui  
 exe "hi WarningMsg guifg=" .s:uwu0_gui 
@@ -85,7 +85,7 @@ exe "hi PMenu guifg=".s:uwu7_gui." guibg=" .s:uwu0_gui
 exe "hi PMenuSel guifg=".s:uwu8_gui." guibg=".s:uwu5_gui  
 exe "hi SignColumn guibg=NONE"
 exe "hi Title guifg=" .s:uwu3_gui 
-exe "hi LineNr guifg=".s:uwu2_gui 
+exe "hi LineNr guifg=".s:uwu11_gui 
 exe "hi NonText guifg=".s:uwu9_gui." guibg=".s:uwu0_gui 
 exe "hi Comment guifg=".s:uwu15_gui
 exe "hi SpecialComment guifg=".s:uwu8_gui "gui=italic guibg=NONE "

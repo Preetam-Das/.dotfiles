@@ -28,6 +28,7 @@ eval "$(dircolors -b)"
 #export PATH=$PATH:~/.local/bin/
 export PATH=/home/pree/.local/bin:$PATH
 export LIBSEAT_BACKEND=logind
+# export EDITOR=nvim
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
 
 # Load version control information
@@ -48,11 +49,6 @@ PS1='%F{5}%B%U%~%u%b%f ${vcs_info_msg_0_}
 
 zstyle ':completion:*' menu select # menu tab complete
 
-# Environment Variables 
-export PATH=$PATH:~/.local/bin/
-export ANDROID_SDK_ROOT=/opt/android-sdk/
-export _JAVA_AWT_WM_NONREPARENTING=1
-export GOPATH=$HOME/Others/go
 # export BROWSER=firefox.desktop
 
 # My functions
@@ -78,7 +74,7 @@ myll ()
 configdir="$HOME/.config"
 cfg ()
 {
-    [ -d "$configdir/$1" ] && cd "$configdir/$1/" && nvim . && return
+    [ -d "$configdir/$1" ] && lf "$configdir/$1/" && return
     echo "$configdir/$1 doesn't exists"
 }
 
