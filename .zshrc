@@ -26,8 +26,6 @@ setopt autocd # autocd
 setopt PROMPT_SUBST
 eval "$(dircolors -b)"
 #export PATH=$PATH:~/.local/bin/
-export PATH=/home/pree/.local/bin:$PATH
-export LIBSEAT_BACKEND=logind
 # export EDITOR=nvim
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
 
