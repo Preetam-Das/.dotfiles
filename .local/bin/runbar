@@ -1,0 +1,7 @@
+if [ $1 = "toggle" ]; then
+    [[ $(pgrep ironbar) == "" ]] && (ironbar &) || pkill ironbar
+fi
+if [ $1 = "reload" ]; then
+#    [[ $(pgrep ironbar) == "" ]] && (ironbar &) || (pkill ironbar && (ironbar &))
+    ironbar load-css ~/.config/ironbar/style.css
+fi

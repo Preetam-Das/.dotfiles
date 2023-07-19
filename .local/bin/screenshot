@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+opt="Select a region\nEntire Window"
+export GRIM_DEFAULT_DIR="/tmp"
+
+selected=$(printf "$opt" | tofi --width=280 --height=130 --placeholder-text="screenshot" --require-match=true --auto-accept-single=false --anchor="center" --outline=3 --corner-radius=8)
+
+if [[ $selected == "Select a region" ]]; then
+    slurp | grim -g -
+elif
+    [[ $selected == "Entire Window" ]]; then
+    grim
+fi

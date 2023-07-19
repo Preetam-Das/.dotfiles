@@ -1,0 +1,30 @@
+#!/bin/sh
+
+getcomm="pactl get-sink-volume @DEFAULT_SINK@"
+setcomm="pactl set-sink-volume @DEFAULT_SINK@"
+
+
+vol=$(eval $getcomm | awk 'NR==1{print substr($5, 1, length($5)-1)}')
+
+case "$1:$2" in
+    "get:")
+        echo $vol
+        ;;
+    "set:"*)
+        eval "$setcomm $2%"
+        ;;
+    "+"* | "-"*)
+        eval "$setcomm $1%"
+        ;;
+    "watch"*)
+        echo $vol
+        while true
+        do
+            nvol=$(eval $getcomm | awk 'NR==1{print substr($5, 1, length($5)-1)}')
+            if [[ $nvol != $vol ]]; then
+                vol=$nvol
+                echo $vol
+            fi
+        done
+        ;;
+esac
