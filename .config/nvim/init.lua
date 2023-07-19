@@ -8,3 +8,6 @@ require('filetypes')          -- statusline
 require('plugins.mkdp')
 require('plugins.treesitter')
 require('plugins.lspconfig')
+require('plugins.colorizer')
+require('plugins.fzf')
+require('nvim-web-devicons')

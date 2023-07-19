@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=100
-SAVEHIST=1000
+HISTSIZE=1000
+SAVEHIST=2000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/pree/.zshrc'
@@ -12,6 +12,7 @@ promptinit
 # End of lines added by compinstall
 
 # keybinds
+bindkey -e
 bindkey "^[[3~" delete-char
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
@@ -78,7 +79,8 @@ cfg ()
 
 
 # my aliases
-alias starty='Hyprland'
+alias ff='findfile'
+alias starty='cd $HOME && Hyprland && cd -'
 alias py='python'
 alias cpout='xclip -selection clipboard'
 alias nv='nvim'
@@ -89,7 +91,6 @@ alias grep='grep --color=always'
 alias tree='tree -C'
 alias rn='ranger'
 alias zt='zathura'
-alias vol='pamixer --set-vol'
 alias sound='pamixer -t'
 alias pacman='pacman --color=always'
 alias yay='yay --color=always'
@@ -117,22 +118,19 @@ fi
 #eval "$(starship init zsh)"
 #exec startx
 ~/.cache/wal/colors-tty.sh
+if [ "$TERM" = "linux" ]; then
+    setterm --cursor on
+fi
 
-# Syntax Highlighting
+# FZF
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+export FZF_COMPLETION_TRIGGER=''
+export FZF_DEFAULT_COMMAND='find .'
+export FZF_DEFAULT_OPTS='-m'
+bindkey '^T' fzf-completion
+bindkey '^I' $fzf_default_completion
+
+# Syntax Highlighting (should be at last)
 source ~/Others/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/pree/Others/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
-#         . "/opt/anaconda/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/opt/anaconda/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<

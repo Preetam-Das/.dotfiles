@@ -1,0 +1,13 @@
+indicator
+indicator-caps-lock
+clock
+#screenshots
+color=$(cat ~/.cache/wal/colors | head -1)
+image=$(cat ~/.cache/wal/wal)
+timestr=%I:%M:%S
+fade-in=0.4
+font=Fira Code Nerd Font
+effect-blur=7x5
+effect-pixelate=6
+effect-vignette=0.5:1
+ring-color=ff0000

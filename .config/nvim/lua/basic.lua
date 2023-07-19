@@ -2,8 +2,8 @@ vim.g.mapleader        = ' '                         -- set the leader key
 vim.cmd('colorscheme uwu')
 vim.diagnostic.config({ virtual_text = false,
                         float = true})
-vim.opt.mouse          = ''
-vim.opt.complete       = 'k'
+-- vim.opt.mouse          = ''
+-- vim.opt.complete       = 'k'
 
 -- Netrw Config
 vim.g.netrw_banner     = 0                           -- Disable netrw banner
@@ -19,7 +19,7 @@ vim.opt.autoindent     = true                        -- set autoindent
 vim.opt.termguicolors  = true                        -- set termguicolors
 vim.opt.expandtab      = true                        -- set expandtab
 vim.opt.list           = true
-vim.opt.spell          = true
+vim.opt.spell          = false
 
 -- valued options
 vim.opt.scrolloff      = 5                                                  -- set scroll offset

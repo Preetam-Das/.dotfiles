@@ -1,0 +1,170 @@
+@import url("/home/pree/.cache/wal/colors-waybar.css");
+@define-color lightbackground shade(@color0, 1.4);
+@define-color lighterbackground shade(@color0, 2);
+
+.background {
+    background-color: transparent;
+}
+
+.container, .container * {
+  background-color: transparent;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+#bar {
+    background-color: @color0;
+    font-family: "Fira Code Nerd Font Mono";
+}
+
+.clock {
+    background-color: @color0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: @color7;
+    border-radius: 10px;
+}
+
+.popup {
+    background-color: @color0;
+}
+
+.popup-clock .calendar {
+    background-color: @color0;
+}
+
+.workspaces .item {
+    padding: 0px;
+    border-radius: 0px;
+    color: @color8;
+    /* transition: border-bottom 0.5s ease-in; */
+}
+
+.workspaces .item.focused {
+    border-bottom: 2px solid @color1;
+    color: @color7;
+}
+
+.focused .label {
+    color: @color4;
+    padding-left: 10px;
+    font-family: "Source Code Pro";
+    font-style: italic;
+    font-weight: bold;
+    /* text-decoration-line: underline; */
+}
+
+.battery {
+    background-color: @lightbackground;
+    padding: 0px 6px 0px 10px;
+    color: @color7;
+    border-radius: 10px 0px 0px 10px;
+    -gtk-outline-radius: 10px 0px 0px 10px;
+    font-family: "Fira Code Nerd Font";
+}
+
+.clipboard {
+    border-radius: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.popup-clipboard {
+    padding-left: 6px;
+}
+.popup-clipboard .item .btn {
+    padding-right: 10px;
+}
+
+.popup-clipboard .item .btn-remove {
+    background-color: @color0;
+    padding-left: 10px;
+    border-radius: 0px;
+}
+
+.sysinfo {
+    padding-right: 6px;
+}
+
+.launcher .item {
+    padding: 0px 6px 0px 6px;
+    border-radius: 0px;
+    transition: background-color 0.6s ease;
+}
+
+.launcher .item.open:not(.focused) {
+    border-bottom: 2px solid @color2;
+}
+
+.launcher .item.focused {
+    background-color: @color2;
+}
+
+.popup-launcher .popup-item {
+    border-radius: 0px;
+}
+
+.power-btn {
+    padding: 0px 6px 0px 6px;
+    border-radius: 0px;
+    color: @color1;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(224,34,32);
+}
+
+.settings-btn {
+    padding: 0px 6px 0px 6px;
+    border-radius: 0px;
+    font-size: 20px;
+}
+
+.power-menu {
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.power-menu-btn {
+    padding: 10px 25px 10px 25px;
+    background-color: transparent;
+}
+
+scale slider {
+    min-height: 10px;
+    min-width: 10px;
+    background-image: image(@color6);
+    border-radius: 50%;
+    border: 2px solid shade(@color6, 0.8);
+    box-shadow: shade(@color6, 0.8) 0px 0px 1px 2px;
+}
+
+scale trough highlight {
+    background: @color4;
+    border-radius: 16px;
+}
+
+scale trough {
+    background: @color8;
+    border-radius: 16px;
+}
+
+scale {
+    margin: 20px;
+    background: @color0;
+}
+
+.test-btn {
+    background: white;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+.clipboard {
+    padding: 0px;
+}

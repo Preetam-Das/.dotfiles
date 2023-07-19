@@ -1,0 +1,83 @@
+name = "coolbar"
+position = "top"
+height = 25
+
+[[center]]
+type = "clock"
+format = "%I:%M %p , %a %d %b "
+
+[[start]]
+type = "workspaces"
+
+[[start]]
+type = "launcher"
+favorites = ["kitty", "firefox"]
+show_names = false
+show_icons = true
+icon_size = 16
+
+[[start]]
+type = "focused"
+show_icon = false
+truncate.mode = "end"
+truncate.max_length = 30
+
+[[end]]
+type = "label"
+label = "{{cat /sys/class/power_supply/BAT0/capacity}}%"
+class = "battery"
+on_click_left = "popup:toggle"
+
+[[end]]
+type = "custom"
+
+[[end.bar]]
+type = "button"
+label = ""
+class = "settings-btn"
+on_click = "popup:toggle"
+
+[[end.popup]]
+type = "box"
+class = "slider-box"
+
+[[end.popup.widgets]]
+type = "slider"
+show_label = false
+orientation = "h"
+min = 0
+# value = "500:v=$(pactl get-sink-volume @DEFAULT_SINK@ | awk 'NR==1 {print $5}') && echo ${v::-1}"
+max = 180
+length = 200
+
+[[end]]
+type = "custom"
+
+[[end.bar]]
+type = "button"
+label = "⏻"
+class = "power-btn"
+on_click = "popup:toggle"
+
+[[end.popup]]
+type = "box"
+orientation = "vertical"
+class =  "power-menu"
+
+
+[[end.popup.widgets]]
+type = "button"
+label = "logout"
+class =  "power-menu-btn"
+
+[[end.popup.widgets]]
+type = "button"
+label = "poweroff"
+class =  "power-menu-btn"
+on_click = "!poweroff"
+
+[[end.popup.widgets]]
+type = "button"
+label = "reboot"
+class =  "power-menu-btn"
+on_click = "!reboot"

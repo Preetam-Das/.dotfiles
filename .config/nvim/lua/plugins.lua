@@ -2,13 +2,16 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
-Plug 'norcalli/nvim-colorizer.lua'
+-- Plug 'norcalli/nvim-colorizer.lua'
+Plug 'NvChad/nvim-colorizer.lua'
 Plug 'tpope/vim-commentary'
 Plug('iamcco/markdown-preview.nvim', {['do'] = 'cd app && yarn install'})
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 -- Plug 'nvim-treesitter/playground'
 -- Plug 'vimwiki/vimwiki'
-Plug 'junegunn/fzf.vim'
+-- Plug 'junegunn/fzf.vim'
+Plug "ibhagwan/fzf-lua"
+Plug "nvim-tree/nvim-web-devicons"
 Plug 'preservim/nerdtree'
 -- Plug 'tpope/vim-surround'
 
