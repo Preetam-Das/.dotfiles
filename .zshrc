@@ -11,6 +11,12 @@ compinit
 promptinit
 # End of lines added by compinstall
 
+## LFCD
+lfcd() {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -last-dir-path /dev/stdout "$@")"
+}
+
 # keybinds
 bindkey -e
 bindkey "^[[3~" delete-char
@@ -107,6 +113,7 @@ alias \215A\201="kbd_mode -a"
 alias hd="hexdump"
 alias youtube="ytfzf -ls"
 alias notes="nvim /home/pree/Notes/index.md"
+#alias gns3='QT_STYLE_OVERRIDE="" gns3'
 
 # my startups
 if [ "$TERM_PROGRAM" = "vscode" ]

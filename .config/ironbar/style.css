@@ -103,7 +103,7 @@
 }
 
 .launcher .item.focused {
-    background-color: @color2;
+    background-color: shade(@color2, 0.8);
 }
 
 .popup-launcher .popup-item {

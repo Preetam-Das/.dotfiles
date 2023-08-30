@@ -7,4 +7,6 @@ export GOPATH=$HOME/Others/go
 export LIBSEAT_BACKEND=logind
 export EDITOR=nvim
 export PROMPT_TOOLKIT_ANSI_COLORS_ONLY=1
-export QT_STYLE_OVERRIDE=kvantum
+unset QT_STYLE_OVERRIDE
+export QT_QPA_PLATFORMTHEME=qt5ct
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'

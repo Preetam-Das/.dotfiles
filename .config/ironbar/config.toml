@@ -8,6 +8,7 @@ format = "%I:%M %p , %a %d %b "
 
 [[start]]
 type = "workspaces"
+hidden = ["special:scratch_dropterm", "special"]
 
 [[start]]
 type = "launcher"
@@ -63,7 +64,6 @@ on_click = "popup:toggle"
 type = "box"
 orientation = "vertical"
 class =  "power-menu"
-
 
 [[end.popup.widgets]]
 type = "button"

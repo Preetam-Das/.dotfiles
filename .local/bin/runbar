@@ -1,5 +1,6 @@
 if [ $1 = "toggle" ]; then
-    [[ $(pgrep ironbar) == "" ]] && (ironbar &) || pkill ironbar
+    # [[ $(pgrep ironbar) == "" ]] && (ironbar &) || pkill ironbar
+    [[ $(ironbar get-visible coolbar) == *"true"* ]] && ironbar set-visible coolbar || ironbar set-visible coolbar --visible
 fi
 if [ $1 = "reload" ]; then
 #    [[ $(pgrep ironbar) == "" ]] && (ironbar &) || (pkill ironbar && (ironbar &))

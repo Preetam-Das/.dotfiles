@@ -95,3 +95,6 @@ set highlight-active-color '#26a98b'
 # # Selected element in index mode
 # set index-active-fg '#0a0f14'
 # set index-active-bg '#98d1ce'
+
+include night
+set recolor 'true'
