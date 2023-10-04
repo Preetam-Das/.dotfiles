@@ -1,3 +1,6 @@
+-- oil.nvim
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 -- Quick save
 vim.keymap.set('', '<A-Return>'  , '<Esc>:w<cr>',  {desc = 'save file'})            -- Alt + Enter 
 

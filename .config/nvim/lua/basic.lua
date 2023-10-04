@@ -1,8 +1,8 @@
 vim.g.mapleader        = ' '                         -- set the leader key
-vim.cmd('colorscheme uwu')
 vim.diagnostic.config({ virtual_text = false,
                         float = true})
-vim.o.guicursor = 'n-v-c:block-Cursor/lCursor,i-ci-ve:block-Cursor2/lCursor2,r-cr:hor20,o:hor50'
+vim.o.guicursor = 'n-v-c:block-Cursor2/lCursor2,i-ci-ve:block-Cursor/lCursor,r-cr:hor20,o:hor50'
+vim.o.conceallevel = 2
 
 -- vim.opt.mouse          = ''
 -- vim.opt.complete       = 'k'

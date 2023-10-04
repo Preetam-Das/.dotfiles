@@ -31,6 +31,9 @@ bindkey "\ej"   down-line-or-history
 # my
 setopt autocd # autocd
 setopt PROMPT_SUBST
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt share_history
 eval "$(dircolors -b)"
 #export PATH=$PATH:~/.local/bin/
 # export EDITOR=nvim
@@ -85,6 +88,9 @@ cfg ()
 
 
 # my aliases
+alias sxiv='nsxiv'
+alias qbit='QT_SCALE_FACTOR=1.2 qbittorrent'
+alias icat='kitten icat'
 alias ff='findfile'
 alias starty='cd $HOME && Hyprland && cd -'
 alias py='python'
@@ -139,5 +145,5 @@ bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
 
 # Syntax Highlighting (should be at last)
-source ~/Others/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/pree/Others/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

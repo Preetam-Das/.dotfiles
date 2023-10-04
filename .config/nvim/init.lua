@@ -1,13 +1,17 @@
-require('basic')               -- basic settings
-require('keybinds')            -- keybindings
-require('plugins')             -- plugins
-require('autocommands')        -- autocommands
-require('statusline')          -- statusline
-require('filetypes')          -- statusline
+require('basic')
+require('keybinds')
+require('autocommands')
+require('filetypes')
+require('lazy-bootstrap')
+require("plugins")
 
-require('plugins.mkdp')
-require('plugins.treesitter')
-require('plugins.lspconfig')
 require('plugins.colorizer')
+require('plugins.treesitter')
+require('plugins.oil')
+require('plugins.nvim-sorround')
+require('plugins.lspconfig')
+require('plugins.colorscheme')
+require('plugins.statusline')
 require('plugins.fzf')
-require('nvim-web-devicons')
+--require('plugins.mkdp')
+--require('nvim-web-devicons')

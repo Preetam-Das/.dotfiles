@@ -1,8 +1,10 @@
 #!/bin/sh
 
+WALDIR="$HOME/Media/Wallpapers/favs"
+
 killall -q hyprpaper
 if [[ $# -eq 0 ]]; then
-    wal=$(find ~/Media/wallpapers/favs -type f | shuf -n 1)
+    wal=$(find $WALDIR -type f | shuf -n 1)
 else
     wal=$(readlink -f $1)
 fi

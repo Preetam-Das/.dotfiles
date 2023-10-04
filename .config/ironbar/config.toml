@@ -1,6 +1,6 @@
 name = "coolbar"
 position = "top"
-height = 25
+height = 22
 
 [[center]]
 type = "clock"
@@ -29,55 +29,55 @@ label = "{{cat /sys/class/power_supply/BAT0/capacity}}%"
 class = "battery"
 on_click_left = "popup:toggle"
 
-[[end]]
-type = "custom"
-
-[[end.bar]]
-type = "button"
-label = ""
-class = "settings-btn"
-on_click = "popup:toggle"
-
-[[end.popup]]
-type = "box"
-class = "slider-box"
-
-[[end.popup.widgets]]
-type = "slider"
-show_label = false
-orientation = "h"
-min = 0
-# value = "500:v=$(pactl get-sink-volume @DEFAULT_SINK@ | awk 'NR==1 {print $5}') && echo ${v::-1}"
-max = 180
-length = 200
-
-[[end]]
-type = "custom"
-
-[[end.bar]]
-type = "button"
-label = "⏻"
-class = "power-btn"
-on_click = "popup:toggle"
-
-[[end.popup]]
-type = "box"
-orientation = "vertical"
-class =  "power-menu"
-
-[[end.popup.widgets]]
-type = "button"
-label = "logout"
-class =  "power-menu-btn"
-
-[[end.popup.widgets]]
-type = "button"
-label = "poweroff"
-class =  "power-menu-btn"
-on_click = "!poweroff"
-
-[[end.popup.widgets]]
-type = "button"
-label = "reboot"
-class =  "power-menu-btn"
-on_click = "!reboot"
+# [[end]]
+# type = "custom"
+#
+# [[end.bar]]
+# type = "button"
+# label = ""
+# class = "settings-btn"
+# on_click = "popup:toggle"
+#
+# [[end.popup]]
+# type = "box"
+# class = "slider-box"
+#
+# [[end.popup.widgets]]
+# type = "slider"
+# show_label = false
+# orientation = "h"
+# min = 0
+# # value = "500:v=$(pactl get-sink-volume @DEFAULT_SINK@ | awk 'NR==1 {print $5}') && echo ${v::-1}"
+# max = 180
+# length = 200
+#
+# [[end]]
+# type = "custom"
+#
+# [[end.bar]]
+# type = "button"
+# label = "⏻"
+# class = "power-btn"
+# on_click = "popup:toggle"
+#
+# [[end.popup]]
+# type = "box"
+# orientation = "vertical"
+# class =  "power-menu"
+#
+# [[end.popup.widgets]]
+# type = "button"
+# label = "logout"
+# class =  "power-menu-btn"
+#
+# [[end.popup.widgets]]
+# type = "button"
+# label = "poweroff"
+# class =  "power-menu-btn"
+# on_click = "!poweroff"
+#
+# [[end.popup.widgets]]
+# type = "button"
+# label = "reboot"
+# class =  "power-menu-btn"
+# on_click = "!reboot"

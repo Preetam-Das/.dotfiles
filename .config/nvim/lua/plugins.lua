@@ -1,36 +1,62 @@
-local Plug = vim.fn['plug#']
+require("lazy").setup({
 
-vim.call('plug#begin', '~/.config/nvim/plugged')
+    -- COLORSHEMES
+    "sekke276/dark_flat.nvim",
+    "rebelot/kanagawa.nvim",
+    "daschw/leaf.nvim",
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {"neanias/everforest-nvim",
+        version = false,
+        lazy = false,
+        priority = 1000, -- make sure to load this before all the other start plugins
+    },
+     'navarasu/onedark.nvim',
 
--- Plug 'norcalli/nvim-colorizer.lua'
-Plug 'NvChad/nvim-colorizer.lua'
-Plug 'tpope/vim-commentary'
-Plug('iamcco/markdown-preview.nvim', {['do'] = 'cd app && yarn install'})
-Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
--- Plug 'nvim-treesitter/playground'
--- Plug 'vimwiki/vimwiki'
--- Plug 'junegunn/fzf.vim'
-Plug "ibhagwan/fzf-lua"
-Plug "nvim-tree/nvim-web-devicons"
-Plug 'preservim/nerdtree'
--- Plug 'tpope/vim-surround'
-
--- LSP Support
-Plug 'neovim/nvim-lspconfig'
--- Plug 'williamboman/mason.nvim'
--- Plug 'williamboman/mason-lspconfig.nvim'
-
--- Autocompletion
--- Plug 'hrsh7th/nvim-cmp'
--- Plug 'hrsh7th/cmp-buffer'
--- Plug 'hrsh7th/cmp-path'
--- Plug 'saadparwaiz1/cmp_luasnip'
--- Plug 'hrsh7th/cmp-nvim-lsp'
--- Plug 'hrsh7th/cmp-nvim-lua'
-
---  Snippets
--- Plug 'L3MON4D3/LuaSnip'
--- Plug 'rafamadriz/friendly-snippets'
--- Plug 'VonHeikemen/lsp-zero.nvim'
-
-vim.call('plug#end')
+    'NvChad/nvim-colorizer.lua',
+    {'numToStr/Comment.nvim',
+        opts = {
+            -- add any options here
+        },
+        lazy = false,
+    },
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    {"nvim-tree/nvim-web-devicons", lazy=true},
+    'stevearc/oil.nvim',
+    {"kylechui/nvim-surround",
+        version = "*",
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({
+            })
+        end
+    },
+    'neovim/nvim-lspconfig',
+    {"nvim-neorg/neorg",
+        build = ":Neorg sync-parsers",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("neorg").setup {
+                load = {
+                    ["core.defaults"] = {},
+                    ["core.concealer"] = {},
+                    ["core.dirman"] = {
+                    config = {
+                        workspaces = {
+                            Notes = "~/Notes",
+                        },
+                    },
+                },
+            },
+        }
+    end,
+  },
+  'nvim-lualine/lualine.nvim',
+  {"ibhagwan/fzf-lua",
+      -- optional for icon support
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = function()
+          -- calling `setup` is optional for customization
+          require("fzf-lua").setup({})
+      end
+  },
+})

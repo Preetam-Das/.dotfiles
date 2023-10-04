@@ -43,9 +43,15 @@ endif
 exe "hi debugBreakPoint guibg=" .s:uwu1_gui." guifg=".s:uwubg_gui
 exe "hi debugPC guibg=" .s:uwu8_gui
 
-"Syntax Highlighting 
+"Neorg bold/italic highlight
+exe "hi @text.strong gui=bold"
+exe "hi @text.emphasis gui=italic"
+
+"Cursor Highlight
 exe "hi Cursor guifg=" .s:uwu1_gui." guibg=" .s:uwu1_gui
 exe "hi Cursor2 guifg=" .s:uwu2_gui." guibg=" .s:uwu2_gui
+
+"Syntax Highlighting
 exe "hi CursorLineNr guifg=" .s:uwu2_gui 
 exe "hi CursorLine guibg=" .s:uwu8_gui 
 exe "hi ErrorMsg guifg=" .s:uwu1_gui." guibg=".s:uwu8_gui  
