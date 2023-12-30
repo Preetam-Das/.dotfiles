@@ -12,16 +12,25 @@ require("lazy").setup({
     },
      'navarasu/onedark.nvim',
 
+     -- COLORIZER
     'NvChad/nvim-colorizer.lua',
+
+    -- COMMENT
     {'numToStr/Comment.nvim',
         opts = {
             -- add any options here
         },
         lazy = false,
     },
+
+    --  TREESITTER
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     {"nvim-tree/nvim-web-devicons", lazy=true},
+
+    -- OIL
     'stevearc/oil.nvim',
+
+    -- SORROUND
     {"kylechui/nvim-surround",
         version = "*",
         event = "VeryLazy",
@@ -30,33 +39,49 @@ require("lazy").setup({
             })
         end
     },
+
+    -- LSP
     'neovim/nvim-lspconfig',
+
+    -- NEORG
     {"nvim-neorg/neorg",
-        build = ":Neorg sync-parsers",
-        dependencies = { "nvim-lua/plenary.nvim" },
-        config = function()
-            require("neorg").setup {
-                load = {
-                    ["core.defaults"] = {},
-                    ["core.concealer"] = {},
-                    ["core.dirman"] = {
-                    config = {
-                        workspaces = {
-                            Notes = "~/Notes",
-                        },
-                    },
-                },
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                notes = "~/Notes",
+              },
             },
-        }
+          },
+        },
+      }
     end,
-  },
-  'nvim-lualine/lualine.nvim',
-  {"ibhagwan/fzf-lua",
-      -- optional for icon support
-      dependencies = { "nvim-tree/nvim-web-devicons" },
-      config = function()
-          -- calling `setup` is optional for customization
-          require("fzf-lua").setup({})
-      end
-  },
+    },
+
+    -- STATUSLINE
+    'nvim-lualine/lualine.nvim',
+
+    -- FZF
+    {"ibhagwan/fzf-lua",
+        -- optional for icon support
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            -- calling `setup` is optional for customization
+            require("fzf-lua").setup({})
+        end
+    },
+
+    -- Markdwon Preview
+    {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+    },
 })

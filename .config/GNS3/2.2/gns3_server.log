@@ -1,0 +1,142 @@
+2023-10-08 21:06:41 INFO run.py:218 GNS3 server version 2.2.42
+2023-10-08 21:06:41 INFO run.py:220 Copyright (c) 2007-2023 GNS3 Technologies Inc.
+2023-10-08 21:06:41 INFO run.py:223 Config file /home/pree/.config/GNS3/2.2/gns3_server.conf loaded
+2023-10-08 21:06:41 WARNING run.py:229 Local mode is enabled. Beware, clients will have full control on your filesystem
+2023-10-08 21:06:41 INFO run.py:242 Running with Python 3.11.5 and has PID 47599
+2023-10-08 21:06:41 INFO run.py:248 Using system certificate store for SSL connections
+2023-10-08 21:06:41 INFO run.py:78 Current locale is en_US.UTF-8
+2023-10-08 21:06:41 WARNING port_manager.py:93 Remote console connections are allowed
+2023-10-08 21:06:41 WARNING port_manager.py:100 Could not determine IP address type for console host
+2023-10-08 21:06:41 INFO web_server.py:318 Starting server on localhost:3080
+2023-10-08 21:06:41 INFO __init__.py:70 Load controller configuration file /home/pree/.config/GNS3/2.2/gns3_controller.conf
+2023-10-08 21:06:41 INFO __init__.py:74 Controller is starting
+2023-10-08 21:06:41 INFO __init__.py:311 Installing base configs in '/home/pree/Others/GNS3/configs'
+2023-10-08 21:06:41 INFO __init__.py:324 Installing built-in disks in '/home/pree/Others/GNS3/images/QEMU'
+2023-10-08 21:06:41 INFO __init__.py:254 Comparing controller version 2.2.42 with config version 2.2.42
+2023-10-08 21:06:41 INFO compute.py:64 Create compute local
+2023-10-08 21:06:41 INFO compute.py:364 Connecting to compute 'local'
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/compute/capabilities HTTP/1.1" 200 553 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/version HTTP/1.1" 200 228 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO notification_handler.py:50 New client has connected to compute WebSocket
+2023-10-08 21:06:41 INFO compute.py:431 Connected to compute 'local' WebSocket 'http://localhost:3080/v2/compute/notifications/ws'
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/version HTTP/1.1" 200 228 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO notification_handler.py:73 New client has connected to controller WebSocket
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/templates HTTP/1.1" 200 7605 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/computes HTTP/1.1" 200 1027 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/appliances?symbol_theme=Classic HTTP/1.1" 200 962106 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/projects HTTP/1.1" 200 1443 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/projects HTTP/1.1" 200 1443 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/alpine-virt-qemu.svg/raw HTTP/1.1" 200 7576 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/classic/router.svg/raw HTTP/1.1" 200 11038 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/ethernet_switch.svg/raw HTTP/1.1" 200 9274 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/vpcs_guest.svg/raw HTTP/1.1" 200 19496 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/cloud.svg/raw HTTP/1.1" 200 27983 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/hub.svg/raw HTTP/1.1" 200 7637 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/qemu_guest.svg/raw HTTP/1.1" 200 45563 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/frame_relay_switch.svg/raw HTTP/1.1" 200 10028 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:41 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/symbols/%3A/symbols/atm_switch.svg/raw HTTP/1.1" 200 9960 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:46 INFO project.py:78 Project a20d52b9-9b2f-4d16-b45d-324ecf36d598 with path '/home/pree/Others/GNS3/projects/Homelab' created
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "POST /v2/compute/projects HTTP/1.1" 201 303 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:46 INFO qemu_vm.py:224 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9] has set the QEMU path to /usr/bin/qemu-system-x86_64
+2023-10-08 21:06:46 INFO qemu_vm.py:626 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9]: MAC address changed to 0c:6f:89:12:00:00
+2023-10-08 21:06:46 INFO qemu_vm.py:574 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9]: number of Ethernet adapters changed to 1
+2023-10-08 21:06:46 INFO qemu_vm.py:151 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9] has been created
+2023-10-08 21:06:46 INFO base_node.py:284 Qemu: rpi [4f6f8912-8495-476e-99f3-fcbea01913b9] created
+2023-10-08 21:06:46 INFO qemu_vm.py:598 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9]: adapter type changed to virtio-net-pci
+2023-10-08 21:06:46 INFO qemu_vm.py:267 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9] has set the QEMU hda_disk_image path to /home/pree/Others/GNS3/images/QEMU/deblite.qcow2
+2023-10-08 21:06:46 INFO qemu_vm.py:371 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9] has set the QEMU hda disk interface to virtio
+2023-10-08 21:06:46 INFO qemu_vm.py:880 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9] has set the QEMU options to -accel kvm
+2023-10-08 21:06:46 INFO qemu_vm.py:767 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9] has set the process priority to normal
+2023-10-08 21:06:46 INFO qemu_vm.py:790 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9] has set the RAM to 1024
+2023-10-08 21:06:46 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:36:46 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes HTTP/1.1" 201 1756 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:46 INFO qemu_vm.py:224 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45] has set the QEMU path to /usr/bin/qemu-system-x86_64
+2023-10-08 21:06:46 INFO qemu_vm.py:626 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45]: MAC address changed to 0c:32:68:1c:00:00
+2023-10-08 21:06:46 INFO qemu_vm.py:574 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45]: number of Ethernet adapters changed to 1
+2023-10-08 21:06:46 INFO qemu_vm.py:151 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45] has been created
+2023-10-08 21:06:46 INFO base_node.py:284 Qemu: tenda [e532681c-f904-4ea7-a253-b2efcc415d45] created
+2023-10-08 21:06:46 INFO qemu_vm.py:598 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45]: adapter type changed to virtio-net-pci
+2023-10-08 21:06:46 INFO qemu_vm.py:574 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45]: number of Ethernet adapters changed to 4
+2023-10-08 21:06:46 INFO qemu_vm.py:267 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45] has set the QEMU hda_disk_image path to /home/pree/Others/GNS3/images/QEMU/openwrt-22.03.0-x86-64-generic-ext4-combined.img
+2023-10-08 21:06:46 INFO qemu_vm.py:371 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45] has set the QEMU hda disk interface to ide
+2023-10-08 21:06:46 INFO qemu_vm.py:767 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45] has set the process priority to normal
+2023-10-08 21:06:46 INFO qemu_vm.py:790 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45] has set the RAM to 128
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes HTTP/1.1" 201 1873 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:46 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:36:46 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/ports/udp HTTP/1.1" 201 244 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/ports/udp HTTP/1.1" 201 244 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:46 INFO qemu_vm.py:1451 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9]: NIO UDP added to adapter 0
+2023-10-08 21:06:46 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:36:46 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/4f6f8912-8495-476e-99f3-fcbea01913b9/adapters/0/ports/0/nio HTTP/1.1" 201 379 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:46 INFO qemu_vm.py:1451 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45]: NIO UDP added to adapter 1
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/e532681c-f904-4ea7-a253-b2efcc415d45/adapters/1/ports/0/nio HTTP/1.1" 201 379 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "POST /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/open HTTP/1.1" 201 747 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:46 INFO project_handler.py:272 New client has connected to the notification stream for project ID 'a20d52b9-9b2f-4d16-b45d-324ecf36d598' (WebSocket method)
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "GET /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/nodes HTTP/1.1" 200 7863 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "GET /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/links HTTP/1.1" 200 1531 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:46 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:46 +0000] "GET /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/drawings HTTP/1.1" 200 206 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:51 INFO qemu_vm.py:1504 QEMU VM "rpi" [4f6f8912-8495-476e-99f3-fcbea01913b9]: NIO UDP removed from adapter 0
+2023-10-08 21:06:51 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:51 +0000] "DELETE /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/4f6f8912-8495-476e-99f3-fcbea01913b9/adapters/0/ports/0/nio HTTP/1.1" 204 239 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:51 INFO qemu_vm.py:1504 QEMU VM "tenda" [e532681c-f904-4ea7-a253-b2efcc415d45]: NIO UDP removed from adapter 1
+2023-10-08 21:06:51 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:36:51 +0000] "DELETE /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/e532681c-f904-4ea7-a253-b2efcc415d45/adapters/1/ports/0/nio HTTP/1.1" 204 239 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:51 INFO base_node.py:333 Qemu: 'rpi' [4f6f8912-8495-476e-99f3-fcbea01913b9]: is closing
+2023-10-08 21:06:51 INFO base_node.py:333 Qemu: 'tenda' [e532681c-f904-4ea7-a253-b2efcc415d45]: is closing
+2023-10-08 21:06:51 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:51 +0000] "DELETE /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/4f6f8912-8495-476e-99f3-fcbea01913b9 HTTP/1.1" 204 181 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:51 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:51 +0000] "DELETE /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/nodes/4f6f8912-8495-476e-99f3-fcbea01913b9 HTTP/1.1" 204 168 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:51 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:36:51 +0000] "DELETE /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/e532681c-f904-4ea7-a253-b2efcc415d45 HTTP/1.1" 204 181 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:51 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:51 +0000] "DELETE /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/nodes/e532681c-f904-4ea7-a253-b2efcc415d45 HTTP/1.1" 204 168 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:52 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:52 +0000] "GET /v2/computes HTTP/1.1" 200 1026 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:54 INFO qemu_vm.py:224 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has set the QEMU path to /usr/bin/qemu-system-x86_64
+2023-10-08 21:06:54 INFO qemu_vm.py:626 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187]: MAC address changed to 0c:36:0a:be:00:00
+2023-10-08 21:06:54 INFO qemu_vm.py:574 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187]: number of Ethernet adapters changed to 1
+2023-10-08 21:06:54 INFO qemu_vm.py:151 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has been created
+2023-10-08 21:06:54 INFO base_node.py:284 Qemu: deblite-1 [74360abe-83de-4e87-b8ee-93d9524dd187] created
+2023-10-08 21:06:54 INFO qemu_vm.py:267 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has set the QEMU hda_disk_image path to /home/pree/Others/GNS3/images/QEMU/deblite.qcow2
+2023-10-08 21:06:54 INFO qemu_vm.py:371 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has set the QEMU hda disk interface to virtio
+2023-10-08 21:06:54 INFO qemu_vm.py:790 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has set the RAM to 1024
+2023-10-08 21:06:54 INFO qemu_vm.py:598 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187]: adapter type changed to virtio-net-pci
+2023-10-08 21:06:54 INFO qemu_vm.py:767 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has set the process priority to normal
+2023-10-08 21:06:54 INFO qemu_vm.py:880 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has set the QEMU options to -accel kvm
+2023-10-08 21:06:54 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:54 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes HTTP/1.1" 201 1762 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:54 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:54 +0000] "POST /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/templates/af41e183-a10d-4882-b450-b4619647f216 HTTP/1.1" 201 2939 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:54 INFO qemu_vm.py:267 QEMU VM "deblite-1" [74360abe-83de-4e87-b8ee-93d9524dd187] has set the QEMU hda_disk_image path to /home/pree/Others/GNS3/images/QEMU/deblite.qcow2
+2023-10-08 21:06:54 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:36:54 +0000] "PUT /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/74360abe-83de-4e87-b8ee-93d9524dd187 HTTP/1.1" 200 1767 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:06:54 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:54 +0000] "PUT /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/nodes/74360abe-83de-4e87-b8ee-93d9524dd187 HTTP/1.1" 200 3011 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:06:59 INFO qemu_vm.py:1727 logging to /home/pree/Others/GNS3/projects/Homelab/project-files/qemu/74360abe-83de-4e87-b8ee-93d9524dd187/qemu-img.log
+2023-10-08 21:06:59 INFO qemu_vm.py:1729 Executing qemu-img with: /usr/bin/qemu-img check /home/pree/Others/GNS3/images/QEMU/deblite.qcow2
+2023-10-08 21:06:59 INFO qemu_vm.py:1733 /usr/bin/qemu-img returned with 0
+2023-10-08 21:06:59 INFO qemu_vm.py:1727 logging to /home/pree/Others/GNS3/projects/Homelab/project-files/qemu/74360abe-83de-4e87-b8ee-93d9524dd187/qemu-img.log
+2023-10-08 21:06:59 INFO qemu_vm.py:1729 Executing qemu-img with: /usr/bin/qemu-img create -o backing_file=/home/pree/Others/GNS3/images/QEMU/deblite.qcow2 -F qcow2 -f qcow2 /home/pree/Others/GNS3/projects/Homelab/project-files/qemu/74360abe-83de-4e87-b8ee-93d9524dd187/hda_disk.qcow2
+2023-10-08 21:06:59 INFO qemu_vm.py:1733 /usr/bin/qemu-img returned with 0
+2023-10-08 21:06:59 INFO base_node.py:874 Qemu: 'deblite-1' [74360abe-83de-4e87-b8ee-93d9524dd187]:local UDP tunnel created between port 10000 and 10001
+2023-10-08 21:06:59 INFO qemu_vm.py:1115 Starting QEMU with: /usr/bin/qemu-system-x86_64 -name deblite-1 -m 1024M -smp cpus=1,sockets=1 -boot order=c -drive file=/home/pree/Others/GNS3/projects/Homelab/project-files/qemu/74360abe-83de-4e87-b8ee-93d9524dd187/hda_disk.qcow2,if=virtio,index=0,media=disk,id=drive0 -uuid 74360abe-83de-4e87-b8ee-93d9524dd187 -serial telnet:127.0.0.1:5001,server,nowait -monitor tcp:127.0.0.1:33053,server,nowait -net none -device virtio-net-pci,mac=0c:36:0a:be:00:00,speed=10000,duplex=full,netdev=gns3-0 -netdev socket,id=gns3-0,udp=127.0.0.1:10001,localaddr=127.0.0.1:10000 -display none -accel kvm
+2023-10-08 21:06:59 INFO qemu_vm.py:1117 logging to /home/pree/Others/GNS3/projects/Homelab/project-files/qemu/74360abe-83de-4e87-b8ee-93d9524dd187/qemu.log
+2023-10-08 21:06:59 INFO qemu_vm.py:1125 QEMU VM "deblite-1" started PID=47679
+2023-10-08 21:06:59 INFO base_node.py:698 Starting new uBridge hypervisor localhost:37375
+2023-10-08 21:06:59 INFO hypervisor.py:169 starting ubridge: ['/usr/bin/ubridge', '-H', 'localhost:37375']
+2023-10-08 21:06:59 INFO hypervisor.py:171 logging to /home/pree/Others/GNS3/projects/Homelab/project-files/qemu/74360abe-83de-4e87-b8ee-93d9524dd187/ubridge.log
+2023-10-08 21:06:59 INFO hypervisor.py:179 ubridge started PID=47683
+2023-10-08 21:06:59 INFO base_node.py:701 Hypervisor localhost:37375 has successfully started
+2023-10-08 21:07:00 INFO ubridge_hypervisor.py:83 Connected to uBridge hypervisor on localhost:37375 after 0.1014 seconds
+2023-10-08 21:07:00 INFO qemu_vm.py:1252 Connected to QEMU monitor on 127.0.0.1:33053 after 0.0107 seconds
+2023-10-08 21:07:00 INFO qemu_vm.py:1317 Execute QEMU monitor command: set_link gns3-0 off
+2023-10-08 21:07:00 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:59 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/74360abe-83de-4e87-b8ee-93d9524dd187/start HTTP/1.1" 200 2342 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:07:00 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:59 +0000] "POST /v2/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/nodes/74360abe-83de-4e87-b8ee-93d9524dd187/start HTTP/1.1" 200 3586 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:07:00 INFO web_log.py:206 ::1 [08/Oct/2023:15:37:00 +0000] "GET /v2/computes HTTP/1.1" 200 1026 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:07:31 INFO qemu_vm.py:1171 QEMU process has stopped, return code: 0
+2023-10-08 21:07:31 INFO base_node.py:712 Stopping uBridge hypervisor localhost:37375
+2023-10-08 21:07:31 INFO hypervisor.py:208 Stopping uBridge process PID=47683
+2023-10-08 21:07:34 INFO server_handler.py:53 Start shutting down the server
+2023-10-08 21:07:34 INFO web_log.py:206 ::1 [08/Oct/2023:15:37:34 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/qemu/nodes/74360abe-83de-4e87-b8ee-93d9524dd187/stop HTTP/1.1" 204 186 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:07:34 INFO base_node.py:333 Qemu: 'deblite-1' [74360abe-83de-4e87-b8ee-93d9524dd187]: is closing
+2023-10-08 21:07:34 INFO project.py:361 Project a20d52b9-9b2f-4d16-b45d-324ecf36d598 with path '/home/pree/Others/GNS3/projects/Homelab' closed
+2023-10-08 21:07:34 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:37:34 +0000] "POST /v2/compute/projects/a20d52b9-9b2f-4d16-b45d-324ecf36d598/close HTTP/1.1" 204 166 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:07:34 INFO web_log.py:206 ::1 [08/Oct/2023:15:37:34 +0000] "POST /v2/shutdown HTTP/1.1" 201 195 "-" "GNS3 QT Client v2.2.42"
+2023-10-08 21:07:34 INFO web_server.py:113 Closing 3 websocket connections...
+2023-10-08 21:07:34 INFO compute.py:457 Connection closed to compute 'local' WebSocket 'http://localhost:3080/v2/compute/notifications/ws'
+2023-10-08 21:07:34 INFO notification_handler.py:82 Client has disconnected from controller WebSocket
+2023-10-08 21:07:34 INFO web_log.py:206 ::1 [08/Oct/2023:15:36:41 +0000] "GET /v2/notifications/ws HTTP/1.1" 200 0 "-" "-"
+2023-10-08 21:07:35 INFO notification_handler.py:59 Client has disconnected from compute WebSocket
+2023-10-08 21:07:35 INFO web_log.py:206 127.0.0.1 [08/Oct/2023:15:36:41 +0000] "GET /v2/compute/notifications/ws HTTP/1.1" 200 0 "-" "Python/3.11 aiohttp/3.8.5"
+2023-10-08 21:07:35 INFO compute.py:364 Connecting to compute 'local'
+2023-10-08 21:07:35 INFO __init__.py:146 Controller is stopping
+2023-10-08 21:07:35 WARNING compute.py:367 Cannot connect to compute 'local': Cannot connect to host localhost:3080 ssl:default [Connect call failed ('127.0.0.1', 3080)]
+2023-10-08 21:07:35 INFO project_handler.py:281 Client has disconnected from notification stream for project ID 'a20d52b9-9b2f-4d16-b45d-324ecf36d598' (WebSocket method)
+2023-10-08 21:07:36 INFO run.py:278 Remove PID file /home/pree/.config/GNS3/2.2/gns3_server.pid

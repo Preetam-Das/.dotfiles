@@ -13,6 +13,8 @@ vim.api.nvim_create_autocmd('BufRead',
 
 vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set awa"})
 
-vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set colorcolumn=90"})
+vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set colorcolumn=80"})
 
 vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set cursorline"})
+
+vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set textwidth=80"})

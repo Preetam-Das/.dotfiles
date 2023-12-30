@@ -10,3 +10,5 @@ export PROMPT_TOOLKIT_ANSI_COLORS_ONLY=1
 unset QT_STYLE_OVERRIDE
 export QT_QPA_PLATFORMTHEME=qt5ct
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+export ASEM51INC=/usr/local/share/asem-51/1.3/mcu
+# export GTK_THEME=Adwaita:dark

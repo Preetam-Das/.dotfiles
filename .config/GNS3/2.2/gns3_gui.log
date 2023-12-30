@@ -1,5 +1,4 @@
-2023-10-04 09:59:46 INFO logger.py:126 Log level: INFO
-2023-10-04 09:59:46 INFO main.py:270 GNS3 GUI version 2.2.42
-2023-10-04 09:59:46 INFO main.py:271 Copyright (c) 2007-2023 GNS3 Technologies Inc.
-2023-10-04 09:59:46 INFO main.py:272 Application started with /usr/bin/gns3
-2023-10-04 09:59:46 WARNING console_view.py:100 WARNING: Experimental features enable. You can use some unfinished features and lost data.
+2023-11-30 07:46:51 INFO logger.py:126 Log level: INFO
+2023-11-30 07:46:51 INFO main.py:270 GNS3 GUI version 2.2.42
+2023-11-30 07:46:51 INFO main.py:271 Copyright (c) 2007-2023 GNS3 Technologies Inc.
+2023-11-30 07:46:51 INFO main.py:272 Application started with /usr/bin/gns3
