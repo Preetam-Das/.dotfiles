@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+opt="Clipboard history"
+
+# selected=$(printf "$opt" | tofi --width=280 --height=130 --placeholder-text="$opt" --require-match=true --auto-accept-single=false --anchor="center" --outline=3 --corner-radius=8)
+selected=$( cliphist list | tofi --placeholder-text="$opt" | cliphist decode | wl-copy )
+
