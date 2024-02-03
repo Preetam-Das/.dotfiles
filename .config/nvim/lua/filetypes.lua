@@ -18,3 +18,14 @@ vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set co
 vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set cursorline"})
 
 vim.api.nvim_create_autocmd("FileType", {pattern = "markdown", command = "set textwidth=80"})
+
+-- Norg settings
+
+vim.api.nvim_create_autocmd("FileType", {pattern = "norg", command = "set awa"})
+
+vim.api.nvim_create_autocmd("FileType", {pattern = "norg", command = "set colorcolumn=80"})
+
+vim.api.nvim_create_autocmd("FileType", {pattern = "norg", command = "set cursorline"})
+
+vim.api.nvim_create_autocmd("FileType", {pattern = "norg", command = "set textwidth=80"})
+
