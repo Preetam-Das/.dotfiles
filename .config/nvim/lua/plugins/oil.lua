@@ -24,20 +24,27 @@ require("oil").setup({
   --   spell = false,
   --   list = false,
   --   conceallevel = 3,
-  --   concealcursor = "n",
+  --   concealcursor = "nvic",
   -- },
-  -- -- Restore window options to previous values when leaving an oil buffer
-  -- restore_win_options = true,
-  -- -- Skip the confirmation popup for simple operations
-  -- skip_confirm_for_simple_edits = false,
-  -- -- Deleted files will be removed with the trash_command (below).
+  -- -- Send deleted files to the trash instead of permanently deleting them (:help oil-trash)
   -- delete_to_trash = false,
-  -- -- Change this to customize the command used when deleting to trash
-  -- trash_command = "trash-put",
+  -- -- Skip the confirmation popup for simple operations (:help oil.skip_confirm_for_simple_edits)
+  -- skip_confirm_for_simple_edits = false,
   -- -- Selecting a new/moved/renamed file or directory will prompt you to save changes first
+  -- -- (:help prompt_save_on_select_new_entry)
   -- prompt_save_on_select_new_entry = true,
+  -- -- Oil will automatically delete hidden buffers after this delay
+  -- -- You can set the delay to false to disable cleanup entirely
+  -- -- Note that the cleanup process only starts when none of the oil buffers are currently displayed
+  -- cleanup_delay_ms = 2000,
+  -- -- Set to true to autosave buffers that are updated with LSP willRenameFiles
+  -- -- Set to "unmodified" to only save unmodified buffers
+  -- lsp_rename_autosave = false,
+  -- -- Constrain the cursor to the editable parts of the oil buffer
+  -- -- Set to `false` to disable, or "name" to keep it on the file names
+  -- constrain_cursor = "editable",
   -- -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
-  -- -- options with a `callback` (e.g. { callback = function() ... end, desc = "", nowait = true })
+  -- -- options with a `callback` (e.g. { callback = function() ... end, desc = "", mode = "n" })
   -- -- Additionally, if it is a string that matches "actions.<name>",
   -- -- it will use the mapping at require("oil.actions").<name>
   -- -- Set to `false` to remove a keymap
@@ -55,7 +62,10 @@ require("oil").setup({
   --   ["_"] = "actions.open_cwd",
   --   ["`"] = "actions.cd",
   --   ["~"] = "actions.tcd",
+  --   ["gs"] = "actions.change_sort",
+  --   ["gx"] = "actions.open_external",
   --   ["g."] = "actions.toggle_hidden",
+  --   ["g\\"] = "actions.toggle_trash",
   -- },
   -- -- Set to false to disable all of the above keymaps
   -- use_default_keymaps = true,
@@ -70,6 +80,12 @@ require("oil").setup({
   --   is_always_hidden = function(name, bufnr)
   --     return false
   --   end,
+  --   sort = {
+  --     -- sort order can be "asc" or "desc"
+  --     -- see :help oil-columns to see which columns are sortable
+  --     { "type", "asc" },
+  --     { "name", "asc" },
+  --   },
   -- },
   -- -- Configuration for the floating window in oil.open_float
   -- float = {
@@ -79,7 +95,7 @@ require("oil").setup({
   --   max_height = 0,
   --   border = "rounded",
   --   win_options = {
-  --     winblend = 10,
+  --     winblend = 0,
   --   },
   --   -- This is the config that will be passed to nvim_open_win.
   --   -- Change values here to customize the layout
@@ -109,6 +125,8 @@ require("oil").setup({
   --   win_options = {
   --     winblend = 0,
   --   },
+  --   -- Whether the preview window is automatically updated when the cursor is moved
+  --   update_on_cursor_moved = true,
   -- },
   -- -- Configuration for the floating progress window
   -- progress = {

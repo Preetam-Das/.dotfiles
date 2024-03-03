@@ -11,6 +11,7 @@ require'lspconfig'.lua_ls.setup{
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.jdtls.setup{}
 require'lspconfig'.marksman.setup{}
+require'lspconfig'.pyright.setup{}
 
 vim.diagnostic.config({ virtual_text = false })
 

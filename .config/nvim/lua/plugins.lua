@@ -13,7 +13,7 @@ require("lazy").setup({
      'navarasu/onedark.nvim',
 
      -- COLORIZER
-    'NvChad/nvim-colorizer.lua',
+     {'NvChad/nvim-colorizer.lua', lazy = true},
 
     -- COMMENT
     {'numToStr/Comment.nvim',
@@ -28,7 +28,14 @@ require("lazy").setup({
     {"nvim-tree/nvim-web-devicons", lazy=true},
 
     -- OIL
-    'stevearc/oil.nvim',
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        lazy = true
+    },
+    -- 'stevearc/oil.nvim',
 
     -- SORROUND
     {"kylechui/nvim-surround",
@@ -62,6 +69,7 @@ require("lazy").setup({
         },
       }
     end,
+    lazy = true,
     },
 
     -- STATUSLINE
@@ -74,7 +82,8 @@ require("lazy").setup({
         config = function()
             -- calling `setup` is optional for customization
             require("fzf-lua").setup({})
-        end
+        end,
+        lazy = true,
     },
 
     -- Markdwon Preview
@@ -83,5 +92,19 @@ require("lazy").setup({
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
+    lazy = true,
     },
+
+    -- Kitty Scrollback
+    {
+    'mikesmithgh/kitty-scrollback.nvim',
+    enabled = true,
+    lazy = true,
+    cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
+    event = { 'User KittyScrollbackLaunch' },
+     version = '^4.0.0', -- pin major version, include fixes and features that do not have breaking changes
+    config = function()
+      require('kitty-scrollback').setup()
+    end,
+  },
 })
